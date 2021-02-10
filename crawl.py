@@ -1,8 +1,10 @@
 import os
+import re
 
 from bs4 import BeautifulSoup
 import string
 import json
+from colors import *
 
 
 def crawl(haystack:str) -> None:
@@ -14,61 +16,69 @@ def crawl(haystack:str) -> None:
     os,
     exclude_word (local),
     }
-
+    :param haystack: str path to file
     """
-    print("about to crawl: "+haystack)
-    haystack = str(haystack)
-    exclude_words = list(open('exclude_words.txt').read().splitlines())
-    with open(haystack, 'rb') as file:
-        soup = BeautifulSoup(file, 'html.parser')
-        content = str(soup.get_text()).lower()
+    print_yellow("about to crawl: "+haystack)
 
-        title = soup.find('title').string.lower()
+    if any(x in haystack for x in ['.htm', '.php']):
+        with open(haystack, 'rb') as file:
+            soup = BeautifulSoup(file, 'html.parser')
 
-        for word in content.split():
-            word = word.translate(str.maketrans('', '', string.punctuation))
-            if exclude_word(word) == False:
-                continue
-            word_score = count_words(word, content.split())
-            word_score += count_words(word, [title])*40
+            content = str(soup.get_text()).lower()
+            content = re.sub(r'[^a-zA-Z\s]+','',content)
+            # content = ''.join(c for c in content if c.isalpha())
+            title = soup.find('title').string.lower()
+    else:
+        content = os.path.splitext(os.path.basename(haystack))[0]
+        content = re.sub(r'[^a-zA-Z\s]+','',content).lower()
+        # content = ''.join(c for c in content if c.isalpha())
+        title = content
 
-            first_letter = str(word[0])
+    for word in content.split():
+        # word = word.translate(str.maketrans('', '', string.punctuation))
+        if exclude_word(word) == False:
+            continue
 
-            dump_file = "index/{}_dump.json".format(first_letter)
-            if os.path.exists(dump_file) == False:
-                f = open(dump_file, 'w')
-                baseline = {}
-                f.write(json.dumps(baseline))
-                f.close()
+        word_score = 40 + count_words(word, content.split())
+        # word_score += count_words(word, [title])*40
 
-            with open(dump_file) as dump_data:
-                words_list = json.load(dump_data)
+        first_letter = str(word[0])
 
-                new_data = {
-                    "title":str(title),
-                    "file_path":haystack,
-                    "score":word_score
-                }
+        dump_file = "index/{}_dump.json".format(first_letter)
+        if os.path.exists(dump_file) == False:
+            f = open(dump_file, 'w')
+            baseline = {}
+            f.write(json.dumps(baseline))
+            f.close()
 
-                if word not in words_list:
-                    words_list[word] =[]
+        with open(dump_file) as dump_data:
+            words_list = json.load(dump_data)
 
-                exists = 0
-                for item in words_list[word]:
-                    for value in item.values():
-                        if title == value:
-                            exists += 1
-                if exists:
-                    continue
-                words_list[word].append(new_data)
-                print(words_list)
+            new_data = {
+                "title":str(title),
+                "file_path":haystack,
+                "score":word_score
+            }
 
+            if word not in words_list:
+                words_list[word] =[]
+
+            exists = 0
+            for item in words_list[word]:
+                for value in item.values():
+                    if title == value:
+                        exists += 1
             if exists:
                 continue
-            with open(dump_file,'w') as stuff:
-                 json.dump(words_list, stuff, indent=4, sort_keys=True)
+            words_list[word].append(new_data)
+            print(words_list)
 
-            print("successfully scraped "+word)
+        if exists:
+            continue
+        with open(dump_file,'w') as stuff:
+             json.dump(words_list, stuff, indent=4, sort_keys=True)
+
+        print_green("successfully scraped "+Color.B_Green+Color.F_Black+word+Color.F_Default+Color.B_Default)
     print("completed")
 
 
