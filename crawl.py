@@ -27,7 +27,10 @@ def crawl(haystack:str) -> None:
             content = str(soup.get_text()).lower()
             content = re.sub(r'[^a-zA-Z\s]+','',content)
             # content = ''.join(c for c in content if c.isalpha())
-            title = soup.find('title').string.lower()
+            try:
+                title = soup.find('title').string.lower()
+            except:
+                title = "unnamed page"
     else:
         content = os.path.splitext(os.path.basename(haystack))[0]
         content = re.sub(r'[^a-zA-Z\s]+','',content).lower()
