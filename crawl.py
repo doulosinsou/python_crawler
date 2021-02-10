@@ -1,9 +1,10 @@
 import os
 import re
-
-from bs4 import BeautifulSoup
 import string
 import json
+import time
+
+from bs4 import BeautifulSoup
 from colors import *
 
 
@@ -58,6 +59,7 @@ def crawl(haystack:str) -> None:
     :param haystack: str path to file
     """
     print_yellow("about to crawl: "+haystack)
+    tic = time.perf_counter()
 
     if any(x in haystack for x in ['.htm', '.php']):
         with open(haystack, 'rb') as file:
@@ -110,15 +112,16 @@ def crawl(haystack:str) -> None:
             if exists:
                 continue
             words_list[word].append(new_data)
-            print(words_list)
+            # print(words_list)
 
         if exists:
             continue
         with open(dump_file,'w') as stuff:
              json.dump(words_list, stuff, indent=4, sort_keys=True)
 
-        print_green("successfully scraped "+Color.B_Green+Color.F_Black+word+Color.F_Default+Color.B_Default)
-    print("completed")
+        print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
+    toc = time.perf_counter()
+    print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
 
 
 def exclude_path(file:str) -> False:
@@ -163,13 +166,28 @@ def include_file_type(file:str) -> False:
     return True
 
 
+#**********************************************************
+#begin calling code and time it
 
+search_dir = './test_files'
 
+start_timer = time.perf_counter()
+call_files(search_dir) #this starts it all
+end_timer = time.perf_counter()
+total_time = end_timer-start_timer
 
+num_files = 0
+num_dir = 0
+for root, dirs, files in os.walk(search_dir):
+    num_files += len(files)
+    num_dir += len(dirs)
+    print(dirs)
 
+num_words = 0
+for dumps in os.scandir('index'):
+    with open(dumps) as file:
+        w_list = json.load(file)
+        num_words += len(w_list)
 
-
-
-
-
-call_files('./test_files/demo')
+print_yellow("Crawled {} files and {} directories.\nIndexed {} words.".format(num_files, num_dir, num_words))
+print_green("Total time: {:0.4}s".format(total_time))
