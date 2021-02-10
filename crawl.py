@@ -6,11 +6,11 @@ import time
 
 from bs4 import BeautifulSoup
 from colors import *
+from log import *
 
 num_files = 0
 num_dir = 0
 num_words = 0
-
 
 def call_files(dir="./test_files") -> None:
     """
@@ -67,7 +67,7 @@ def crawl(haystack:str) -> None:
     :param haystack: str path to file
     """
     global num_words
-    print_yellow("about to crawl: "+haystack)
+    # print_yellow("about to crawl: "+haystack)
     tic = time.perf_counter()
 
     if any(x in haystack for x in ['.htm', '.php']):
@@ -127,9 +127,9 @@ def crawl(haystack:str) -> None:
             continue
         with open(dump_file,'w') as stuff:
              json.dump(words_list, stuff, indent=4, sort_keys=True)
-             
+
         num_words += 1
-        print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
+        # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
     toc = time.perf_counter()
     print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
 
@@ -178,7 +178,8 @@ def include_file_type(file:str) -> False:
 
 #**********************************************************
 #begin calling code and time it
-
+date = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+print(date)
 search_dir = './test_files'
 
 start_timer = time.perf_counter()
@@ -188,3 +189,6 @@ total_time = end_timer-start_timer
 
 print_yellow("Crawled {} files and {} directories.\nIndexed {} words.".format(num_files, num_dir, num_words))
 print_green("Total time: {:0.4}s".format(total_time))
+
+endfile = " end file ".center(80, "*")
+print(endfile, "\n")
