@@ -1,0 +1,10 @@
+<!Doctype HTML>
+<html>
+<head>
+  <title>SKIP</title>
+</head>
+<body>
+  <p>This Whole file should be skipped</p>
+</body>
+
+</html>

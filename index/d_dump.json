@@ -1,0 +1,9 @@
+{
+    "demo": [
+        {
+            "file_path": "./test_files/demo/test_me_also.html",
+            "score": 1,
+            "title": "system"
+        }
+    ]
+}

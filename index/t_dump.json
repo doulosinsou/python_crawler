@@ -1,0 +1,14 @@
+{
+    "test": [
+        {
+            "file_path": "./test_files/demo/test_me.html",
+            "score": 43,
+            "title": "test"
+        },
+        {
+            "file_path": "./test_files/demo/test_me_also.html",
+            "score": 2,
+            "title": "system"
+        }
+    ]
+}
