@@ -26,7 +26,6 @@ def crawl(haystack:str) -> None:
 
             content = str(soup.get_text()).lower()
             content = re.sub(r'[^a-zA-Z\s]+','',content)
-            # content = ''.join(c for c in content if c.isalpha())
             try:
                 title = soup.find('title').string.lower()
             except:
@@ -34,16 +33,14 @@ def crawl(haystack:str) -> None:
     else:
         content = os.path.splitext(os.path.basename(haystack))[0]
         content = re.sub(r'[^a-zA-Z\s]+','',content).lower()
-        # content = ''.join(c for c in content if c.isalpha())
         title = content
 
     for word in content.split():
-        # word = word.translate(str.maketrans('', '', string.punctuation))
         if exclude_word(word) == False:
             continue
 
-        word_score = 40 + count_words(word, content.split())
-        # word_score += count_words(word, [title])*40
+        word_score = count_words(word, content.split())
+        word_score += count_words(word, title.split())*40
 
         first_letter = str(word[0])
 
