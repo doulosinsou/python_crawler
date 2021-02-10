@@ -7,6 +7,10 @@ import time
 from bs4 import BeautifulSoup
 from colors import *
 
+num_files = 0
+num_dir = 0
+num_words = 0
+
 
 def call_files(dir="./test_files") -> None:
     """
@@ -36,14 +40,18 @@ def scantree(path:str) -> dict:
     :return: obj with data about the files, namely: file path
 
     """
+    global num_dir
+    global num_files
     for entry in os.scandir(path):
         if exclude_path(entry.path) == False:
             continue
         if entry.is_dir(follow_symlinks=False):
+            num_dir += 1
             yield from scantree(entry.path)
         else:
             if include_file_type(entry.path):
                 continue
+            num_files += 1
             yield entry
 
 
@@ -58,6 +66,7 @@ def crawl(haystack:str) -> None:
     }
     :param haystack: str path to file
     """
+    global num_words
     print_yellow("about to crawl: "+haystack)
     tic = time.perf_counter()
 
@@ -118,7 +127,8 @@ def crawl(haystack:str) -> None:
             continue
         with open(dump_file,'w') as stuff:
              json.dump(words_list, stuff, indent=4, sort_keys=True)
-
+             
+        num_words += 1
         print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
     toc = time.perf_counter()
     print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
@@ -175,19 +185,6 @@ start_timer = time.perf_counter()
 call_files(search_dir) #this starts it all
 end_timer = time.perf_counter()
 total_time = end_timer-start_timer
-
-num_files = 0
-num_dir = 0
-for root, dirs, files in os.walk(search_dir):
-    num_files += len(files)
-    num_dir += len(dirs)
-    print(dirs)
-
-num_words = 0
-for dumps in os.scandir('index'):
-    with open(dumps) as file:
-        w_list = json.load(file)
-        num_words += len(w_list)
 
 print_yellow("Crawled {} files and {} directories.\nIndexed {} words.".format(num_files, num_dir, num_words))
 print_green("Total time: {:0.4}s".format(total_time))
