@@ -48,7 +48,7 @@ Update `exclude_words.txt` for specific words you want to not scrape.
 Run `crawl.py` from command line to scrape words from directory and build dump files.
 
 ##Wipe
-Re-running `crawl.py` will only add words if the word does not have that file associated with it. Therefore updating the file will not inherently add new occurrences or scores. Run `wipe_index.py` from command line to clear dump files AND log file.
+Re-running `crawl.py` checks the modified date of each file. Run `wipe_index.py` from command line to clear dump files AND log file.
 
 ##Use
 The dump files are .json and can be called as such. The 'score' of the word is the number of times the word is used in the file. If you wish to boost the score of matches in the Title, use the 'in-title' key. 'in-title' is the number of times the word is in the title.

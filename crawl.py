@@ -26,7 +26,9 @@ def call_files(dir="./test_files") -> None:
     for files in scantree(dir):
         rel_file = os.path.relpath(files.path, dir)
         local_path = "{}/{}".format(dir,rel_file)
-
+        if already_crawled(local_path):
+            print(local_path+" already crawled")
+            continue
         crawl(local_path)
 
 
@@ -55,6 +57,23 @@ def scantree(path:str) -> dict:
             yield entry
 
 
+def already_crawled(file:str) -> True:
+    modified = str(os.path.getmtime(file))
+    crawled = './index/crawled.json'
+    with open(crawled) as cfiles:
+        flist = json.load(cfiles)
+        for f in flist:
+            fsplit = f.split('_MOD_')
+            path = fsplit[0]
+            mod = fsplit[1]
+            if (path == file) and (mod == modified):
+                return True
+        flist.append(file+"_MOD_"+modified)
+    with open(crawled, 'w') as cfiles:
+        json.dump(flist, cfiles, indent=4, sort_keys=True)
+    return False
+
+
 def crawl(haystack:str) -> None:
     """Creates an index for every significant word used in supplied file. Scores the word by how many times it is used plus if it occurs in title of html.
     Dependencies{
@@ -69,6 +88,7 @@ def crawl(haystack:str) -> None:
     global num_words
     # print_yellow("about to crawl: "+haystack)
     tic = time.perf_counter()
+    modified = time.ctime(os.path.getmtime(haystack))
 
     with open('include.txt', 'r') as includes:
         text_files = includes.read().lower().splitlines()
@@ -116,25 +136,26 @@ def crawl(haystack:str) -> None:
         with open(dump_file) as dump_data:
             words_list = json.load(dump_data)
 
-            new_data = {
-                "title":str(title),
-                "file_path":haystack,
-                "score":word_score,
-                "in_title":in_title
-            }
-
             if word not in words_list:
                 words_list[word] =[]
 
             exists = 0
             for item in words_list[word]:
-                for value in item.values():
-                    if title == value:
-                        exists += 1
+                if (item['title'] == title) and (item['score'] == word_score):
+                    exists += 1
+
             if exists:
                 continue
+
+            new_data = {
+                "title":str(title),
+                "file_path":haystack,
+                "score":word_score,
+                "in_title":in_title,
+                "modified":modified
+            }
+
             words_list[word].append(new_data)
-            # print(words_list)
 
         if exists:
             continue
