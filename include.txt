@@ -1,5 +1,8 @@
-TEXT.htm
-TEXT.html
+Text:
+.htm
+.html
+.php
+.txt
+
+Non-Text:
 .mp3
-TEXT.php
-TEXT.txt

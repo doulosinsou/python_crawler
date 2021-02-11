@@ -71,12 +71,16 @@ def crawl(haystack:str) -> None:
     tic = time.perf_counter()
 
     with open('include.txt', 'r') as includes:
-        text_files = includes.read().splitlines()
+        text_files = includes.read().lower().splitlines()
 
     inc_list = []
     for lin in text_files:
-        if "TEXT" in lin:
-            inc_list.append(lin.split('.')[-1])
+        if "non-text:" in lin:
+            break
+        if "text:" in lin:
+            continue
+        if lin:
+            inc_list.append(lin)
 
     if any(x in haystack for x in inc_list):
         with open(haystack, 'rb') as file:

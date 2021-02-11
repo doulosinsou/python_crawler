@@ -6,3 +6,5 @@ for f in os.listdir(dir):
     os.remove(os.path.join(dir, f))
     if not os.path.isfile(os.path.join(dir, f)):
         print("successful")
+
+log = open('logfile.log', 'w').close()

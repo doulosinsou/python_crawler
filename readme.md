@@ -14,7 +14,7 @@ Open `my_path.txt` . Enter relative or absolute path of directory to search. (Us
 ###Exclude certain files/folders
 Open `exclude_path.txt` . Write folders, file names, or openings of file/folder names you wish to exclude from the crawl.
 
-Example: The following does not crawl files in the folders:
+Example: The following does not crawl these files:
 ./my_path/subdir/myfile.txt
 ./my_path/skip_me.htm
 ./my_path/_oldData/
@@ -26,16 +26,20 @@ skip_me.htm
 /_
 ```
 ###Include file types you want to crawl
-Open `include.txt` . Write dot + extention of files you want to crawl on new line. Prepend crawlable files with 'TEXT'. This tells the program to read the information inside.
+Open `include.txt` . Two sections in the files are: 'Text:' and 'Non-text:'. Write dot + extension of files you want to crawl on new line in 'Text' section.
+
 Example:
 ```
-TEXT.htm
-TEXT.html
-TEXT.php
+Text:
+.htm
+.html
+.php
+
+Non-text:
 .mp3
 ```
-__note: non TEXT prepended files only catalogue its own title__
-listen_to_jazz.mp3 will scrape the words 'listen', 'to', 'jazz'.
+__note: Non-text files only catalogue its own title__
+The file `listen_to_jazz.mp3` will scrape the words 'listen', 'to', 'jazz'.
 
 ###Exclude common words
 Update `exclude_words.txt` for specific words you want to not scrape.
@@ -44,7 +48,7 @@ Update `exclude_words.txt` for specific words you want to not scrape.
 Run `crawl.py` from command line to scrape words from directory and build dump files.
 
 ##Wipe
-Re-running `crawl.py` will only add words if the word does not have that file associated with it. Therefore updating the file will not inherently add new occurrences or scores. Run `wipe_index.py` from command line to clear dump files.
+Re-running `crawl.py` will only add words if the word does not have that file associated with it. Therefore updating the file will not inherently add new occurrences or scores. Run `wipe_index.py` from command line to clear dump files AND log file.
 
 ##Use
-The dump files are .json and can be called as such. The 'score' of the word is used to calculate the number of times the word is used in the file.
+The dump files are .json and can be called as such. The 'score' of the word is the number of times the word is used in the file. If you wish to boost the score of matches in the Title, use the 'in-title' key. 'in-title' is the number of times the word is in the title.
