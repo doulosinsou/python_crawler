@@ -26,15 +26,15 @@ skip_me.htm
 /_
 ```
 ###Include file types you want to crawl
-Open `include.txt` . Write dot + extention of files you want to crawl on new line
+Open `include.txt` . Write dot + extention of files you want to crawl on new line. Prepend crawlable files with 'TEXT'. This tells the program to read the information inside.
 Example:
 ```
-.htm
-.html
-.php
+TEXT.htm
+TEXT.html
+TEXT.php
 .mp3
 ```
-__note: non text files only catalogue its own title__
+__note: non TEXT prepended files only catalogue its own title__
 listen_to_jazz.mp3 will scrape the words 'listen', 'to', 'jazz'.
 
 ###Exclude common words
@@ -47,4 +47,4 @@ Run `crawl.py` from command line to scrape words from directory and build dump f
 Re-running `crawl.py` will only add words if the word does not have that file associated with it. Therefore updating the file will not inherently add new occurrences or scores. Run `wipe_index.py` from command line to clear dump files.
 
 ##Use
-The dump files are .json and can be called as such. The 'score' of the word is used to calculate the number of times the word is used in the file. 
+The dump files are .json and can be called as such. The 'score' of the word is used to calculate the number of times the word is used in the file.
