@@ -70,7 +70,15 @@ def crawl(haystack:str) -> None:
     # print_yellow("about to crawl: "+haystack)
     tic = time.perf_counter()
 
-    if any(x in haystack for x in ['.htm', '.php']):
+    with open('include.txt', 'r') as includes:
+        text_files = includes.read().splitlines()
+
+    inc_list = []
+    for lin in text_files:
+        if "TEXT" in lin:
+            inc_list.append(lin.split('.')[-1])
+
+    if any(x in haystack for x in inc_list):
         with open(haystack, 'rb') as file:
             soup = BeautifulSoup(file, 'html.parser')
 
@@ -79,7 +87,7 @@ def crawl(haystack:str) -> None:
             try:
                 title = soup.find('title').string.lower()
             except:
-                title = "unnamed page"
+                title = os.path.splitext(os.path.basename(haystack))[0]
     else:
         content = os.path.splitext(os.path.basename(haystack))[0]
         content = re.sub(r'[^a-zA-Z\s]+','',content).lower()
@@ -90,7 +98,7 @@ def crawl(haystack:str) -> None:
             continue
 
         word_score = count_words(word, content.split())
-        word_score += count_words(word, title.split())*40
+        in_title = count_words(word, title.split())
 
         first_letter = str(word[0])
 
@@ -107,7 +115,8 @@ def crawl(haystack:str) -> None:
             new_data = {
                 "title":str(title),
                 "file_path":haystack,
-                "score":word_score
+                "score":word_score,
+                "in_title":in_title
             }
 
             if word not in words_list:
@@ -170,8 +179,7 @@ def include_file_type(file:str) -> False:
     """return False if supplied file fails to match any file extention in inclusion file"""
     include_path = list(open(type).read().splitlines())
     for inc in include_path:
-        if file.lower().endswith(inc):
-            # print("{} returns false".format(file))
+        if file.lower().endswith("."+inc.split('.')[-1]):
             return False
     return True
 
@@ -180,7 +188,7 @@ def include_file_type(file:str) -> False:
 #begin calling code and time it
 date = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
 print(date)
-search_dir = './test_files'
+search_dir = open('my_path.txt', 'r').read().strip()
 
 start_timer = time.perf_counter()
 call_files(search_dir) #this starts it all

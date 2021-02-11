@@ -21,3 +21,237 @@ Indexed 1876 words.[39m
 [32mTotal time: 5.553s[39m
 *********************************** end file *********************************** 
 
+2021-02-11 03:33:35
+2021-02-11 03:33:50
+2021-02-11 03:36:21
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.002034s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:37:40
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007445s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:38:50
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.001047s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:41:17
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0009847s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:42:44
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007818s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:43:19
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0008018s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:43:31
+./test_files/demo
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007375s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:44:02
+./test_files/demo
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007968s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:45:05
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007378s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:47:54
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0008366s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:48:13
+2021-02-11 03:48:19
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007733s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:48:35
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0008195s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:48:50
+[33mCrawled 0 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.0007872s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:50:59
+htm
+html
+mp3
+php
+[32mCrawled ./test_files/demo/search_results.php in 0.0196 seconds[39m
+htm
+html
+[32mCrawled ./test_files/demo/Bad_data2.html in 0.0023 seconds[39m
+htm
+html
+[32mCrawled ./test_files/demo/test_me.html in 0.0052 seconds[39m
+htm
+html
+[32mCrawled ./test_files/demo/Bad_data3.html in 0.0015 seconds[39m
+htm
+html
+mp3
+php
+txt
+htm
+html
+mp3
+php
+txt
+htm
+html
+[32mCrawled ./test_files/demo/test_me_also.html in 0.0038 seconds[39m
+htm
+html
+[32mCrawled ./test_files/demo/Bad_data.html in 0.0023 seconds[39m
+htm
+html
+mp3
+[32mCrawled ./test_files/demo/Christ the Very Form of God.mp3 in 0.0025 seconds[39m
+[33mCrawled 7 files and 0 directories.
+Indexed 26 words.[39m
+[32mTotal time: 0.04069s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:52:23
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+.php
+.txt
+.htm
+.html
+.mp3
+[32mCrawled ./test_files/demo/Christ the Very Form of God.mp3 in 0.0010 seconds[39m
+[33mCrawled 1 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.003035s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:52:58
+[32mCrawled ./test_files/demo/search_results.php in 0.0071 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data2.html in 0.0009 seconds[39m
+[32mCrawled ./test_files/demo/test_me.html in 0.0022 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data3.html in 0.0005 seconds[39m
+[32mCrawled ./test_files/demo/test_me_also.html in 0.0020 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data.html in 0.0009 seconds[39m
+[32mCrawled ./test_files/demo/Christ the Very Form of God.mp3 in 0.0008 seconds[39m
+[33mCrawled 7 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.01739s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 03:56:21
+2021-02-11 03:56:35
+2021-02-11 04:00:19
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/search_results.php in 0.0071 seconds[39m
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/Bad_data2.html in 0.0008 seconds[39m
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/test_me.html in 0.0022 seconds[39m
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/Bad_data3.html in 0.0006 seconds[39m
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/test_me_also.html in 0.0024 seconds[39m
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/Bad_data.html in 0.0011 seconds[39m
+['htm', 'html', 'php', 'txt']
+[32mCrawled ./test_files/demo/Christ the Very Form of God.mp3 in 0.0009 seconds[39m
+[33mCrawled 7 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.01807s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 04:00:41
+[32mCrawled ./test_files/demo/search_results.php in 0.0074 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data2.html in 0.0008 seconds[39m
+[32mCrawled ./test_files/demo/test_me.html in 0.0022 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data3.html in 0.0008 seconds[39m
+[32mCrawled ./test_files/demo/test_me_also.html in 0.0024 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data.html in 0.0011 seconds[39m
+[32mCrawled ./test_files/demo/Christ the Very Form of God.mp3 in 0.0009 seconds[39m
+[33mCrawled 7 files and 0 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.01865s[39m
+*********************************** end file *********************************** 
+
+2021-02-11 04:01:17
+[32mCrawled ./test_files/demo/search_results.php in 0.0169 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data2.html in 0.0014 seconds[39m
+[32mCrawled ./test_files/demo/test_me.html in 0.0044 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data3.html in 0.0011 seconds[39m
+[32mCrawled ./test_files/demo/test_me_also.html in 0.0049 seconds[39m
+[32mCrawled ./test_files/demo/Bad_data.html in 0.0025 seconds[39m
+[32mCrawled ./test_files/demo/Christ the Very Form of God.mp3 in 0.0032 seconds[39m
+[33mCrawled 7 files and 0 directories.
+Indexed 26 words.[39m
+[32mTotal time: 0.03791s[39m
+*********************************** end file *********************************** 
+

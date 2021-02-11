@@ -1,4 +1,5 @@
-.htm
-.html
+TEXT.htm
+TEXT.html
 .mp3
-.php
+TEXT.php
+TEXT.txt
