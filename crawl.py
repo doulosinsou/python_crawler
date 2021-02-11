@@ -108,21 +108,33 @@ def crawl(haystack:str) -> None:
 
             content = str(soup.get_text()).lower()
             content = re.sub(r'[^a-zA-Z\s]+','',content)
+            content = exclude_words(content.split())
             try:
-                title = soup.find('title').string.lower()
+                title = soup.find('title').string.lower().split()
             except:
-                title = os.path.splitext(os.path.basename(haystack))[0]
+                title = os.path.splitext(os.path.basename(haystack))[0].split()
     else:
         content = os.path.splitext(os.path.basename(haystack))[0]
-        content = re.sub(r'[^a-zA-Z\s]+','',content).lower()
-        title = content
+        content = re.sub(r'[^a-zA-Z\s]+','',content).lower().split()
+        title = exclude_words(content)
 
-    for word in content.split():
-        if exclude_word(word) == False:
-            continue
+    file_dump = './index/path_dump/'+os.path.splitext(os.path.basename(haystack))[0]+'_dump.json'
+    try:
+        with open(file_dump, "r") as fdump:
+            old_words = json.load(fdump)
+            removed_words = set(old_words)-set(content)
+            purge_words(removed_words)
+            content = list(set(content)-set(old_words))
+    except:
+        pass
 
-        word_score = count_words(word, content.split())
-        in_title = count_words(word, title.split())
+    with open(file_dump, 'w') as fdump:
+        json.dump(content, fdump)
+
+    for word in content:
+
+        word_score = count_words(word, content)
+        in_title = count_words(word, title)
 
         first_letter = str(word[0])
 
@@ -179,15 +191,12 @@ def exclude_path(file:str) -> False:
     return True
 
 
-def exclude_word(file:str) -> False:
+def exclude_words(words) -> list:
     type = "exclude_words.txt"
-
-    """return False if supplied word matches any word in exclusion file"""
+    """returns new list after extracting words found in exclusion file"""
     exclude_path = list(open(type).read().splitlines())
-    for ex in exclude_path:
-        if ex == file: ##must be == to match whole word rather than part of it
-            return False
-    return True
+    content = list(set(words) - set(exclude_path))
+    return list(content)
 
 
 def count_words(needle:str, haystack:list) -> int:
@@ -207,6 +216,20 @@ def include_file_type(file:str) -> False:
         if file.lower().endswith("."+inc.split('.')[-1]):
             return False
     return True
+
+
+def purge_words(removed):
+
+    for word in removed:
+        first_letter = str(word[0])
+        dump_file = "index/{}_dump.json".format(first_letter)
+        with open(dump_file) as stuff:
+            tokeep = json.load(stuff)
+        for key, occlist in wlist.items():
+            for ind, occ in enumerate(occlist):
+                del tokeep[key][ind]
+        with open(dump_file,'w') as stuff:
+             json.dump(tokeep, stuff, indent=4, sort_keys=True)
 
 
 #**********************************************************
