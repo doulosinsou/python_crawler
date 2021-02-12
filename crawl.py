@@ -110,10 +110,10 @@ def crawl(haystack:str) -> None:
             og_content = list(content)
             content = exclude_words(content)
             try:
-                title = soup.find('title').string.lower().split()
+                title = soup.find('title').string.lower()
                 og_title = list(title)
             except:
-                title = os.path.splitext(os.path.basename(haystack))[0].split()
+                title = os.path.splitext(os.path.basename(haystack))[0]
                 og_title = list(title)
     else:
         content = os.path.splitext(os.path.basename(haystack))[0]
@@ -164,7 +164,7 @@ def crawl(haystack:str) -> None:
                 continue
 
             new_data = {
-                "title":" ".join(title),
+                "title":title,
                 "file_path":haystack,
                 "score":word_score,
                 "in_title":in_title,
@@ -223,6 +223,8 @@ def include_file_type(file:str) -> False:
 
 
 def purge_words(removed:dict, title:str):
+    print("removed dict:")
+    print(removed)
     if not removed:
         return
 
@@ -236,6 +238,7 @@ def purge_words(removed:dict, title:str):
         del_words = []
 
         for key, occ in enumerate(tokeep[word]):
+            # print(occ)
             if occ['title'] == title:
                 del tokeep[word][key]
 
