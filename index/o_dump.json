@@ -1,0 +1,587 @@
+{
+    "obedience": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 4,
+            "title": "faithfulness"
+        }
+    ],
+    "obey": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 2,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 2,
+            "title": "faithfulness"
+        }
+    ],
+    "obeyed": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 3,
+            "title": "faithfulness"
+        }
+    ],
+    "obeys": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "obsessing": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        }
+    ],
+    "obtain": [
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "obtained": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "occasion": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        }
+    ],
+    "occasional": [
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "of": [
+        {
+            "file_path": "./test_files/Christ the Very Form of God.mp3",
+            "in_title": 1,
+            "modified": "Wed Feb 10 11:55:37 2021",
+            "score": 1,
+            "title": "g o d   c h r i s t   f o r m"
+        }
+    ],
+    "off": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        }
+    ],
+    "offered": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "offers": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        }
+    ],
+    "office": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "often": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 6,
+            "title": "faithfulness"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 2,
+            "title": "commitment"
+        }
+    ],
+    "old": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 2,
+            "title": "commitment"
+        }
+    ],
+    "one": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 3,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 3,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 9,
+            "title": "faithfulness"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 6,
+            "title": "commitment"
+        }
+    ],
+    "ones": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 2,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "oneself": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "onesimus": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "onetime": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        }
+    ],
+    "ongoing": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        }
+    ],
+    "online": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "optimum": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        }
+    ],
+    "original": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "other": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 3,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 6,
+            "title": "faithfulness"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 3,
+            "title": "bodily exercise"
+        }
+    ],
+    "others": [
+        {
+            "file_path": "./test_files/avoiding_compromise.html",
+            "in_title": 0,
+            "modified": "Mon Feb  8 10:56:31 2021",
+            "score": 5,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 5,
+            "title": "avoiding compromise"
+        },
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 3,
+            "title": "faithfulness"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 2,
+            "title": "commitment"
+        }
+    ],
+    "ought": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "ourselves": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 2,
+            "title": "bodily exercise"
+        }
+    ],
+    "over": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 3,
+            "title": "faithfulness"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "overall": [
+        {
+            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "in_title": 0,
+            "modified": "Mon Feb  8 09:32:37 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        },
+        {
+            "file_path": "./test_files/bodily_exercise.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:44 2021",
+            "score": 1,
+            "title": "bodily exercise"
+        }
+    ],
+    "overcame": [
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "overcome": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        },
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 2,
+            "title": "commitment"
+        }
+    ],
+    "overcoming": [
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "overnight": [
+        {
+            "file_path": "./test_files/faithfulness.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 21:57:54 2021",
+            "score": 1,
+            "title": "faithfulness"
+        }
+    ],
+    "overto": [
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ],
+    "own": [
+        {
+            "file_path": "./test_files/commitment.htm",
+            "in_title": 0,
+            "modified": "Thu Feb 11 16:50:50 2021",
+            "score": 1,
+            "title": "commitment"
+        }
+    ]
+}

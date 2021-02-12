@@ -105,36 +105,40 @@ def crawl(haystack:str) -> None:
     if any(x in haystack for x in inc_list):
         with open(haystack, 'rb') as file:
             soup = BeautifulSoup(file, 'html.parser')
-
             content = str(soup.get_text()).lower()
-            content = re.sub(r'[^a-zA-Z\s]+','',content)
-            content = exclude_words(content.split())
+            content = re.sub(r'[^a-zA-Z\s]+','',content).split()
+            og_content = list(content)
+            content = exclude_words(content)
             try:
                 title = soup.find('title').string.lower().split()
+                og_title = list(title)
             except:
                 title = os.path.splitext(os.path.basename(haystack))[0].split()
+                og_title = list(title)
     else:
         content = os.path.splitext(os.path.basename(haystack))[0]
         content = re.sub(r'[^a-zA-Z\s]+','',content).lower().split()
-        title = exclude_words(content)
+        og_content = list(content)
+        og_title = list(content)
+        title = " ".join(list(exclude_words(content)))
 
     file_dump = './index/path_dump/'+os.path.splitext(os.path.basename(haystack))[0]+'_dump.json'
     try:
         with open(file_dump, "r") as fdump:
             old_words = json.load(fdump)
             removed_words = set(old_words)-set(content)
-            purge_words(removed_words)
+            purge_words(removed_words, title)
+            new_words = list(content)
             content = list(set(content)-set(old_words))
     except:
-        pass
+        new_words = content
 
     with open(file_dump, 'w') as fdump:
-        json.dump(content, fdump)
+        json.dump(new_words, fdump)
 
     for word in content:
-
-        word_score = count_words(word, content)
-        in_title = count_words(word, title)
+        word_score = count_words(word, og_content)
+        in_title = count_words(word, og_title)
 
         first_letter = str(word[0])
 
@@ -160,7 +164,7 @@ def crawl(haystack:str) -> None:
                 continue
 
             new_data = {
-                "title":str(title),
+                "title":" ".join(title),
                 "file_path":haystack,
                 "score":word_score,
                 "in_title":in_title,
@@ -218,19 +222,29 @@ def include_file_type(file:str) -> False:
     return True
 
 
-def purge_words(removed):
+def purge_words(removed:dict, title:str):
+    if not removed:
+        return
 
     for word in removed:
         first_letter = str(word[0])
         dump_file = "index/{}_dump.json".format(first_letter)
         with open(dump_file) as stuff:
             tokeep = json.load(stuff)
-        for key, occlist in wlist.items():
-            for ind, occ in enumerate(occlist):
-                del tokeep[key][ind]
-        with open(dump_file,'w') as stuff:
-             json.dump(tokeep, stuff, indent=4, sort_keys=True)
+            tocopy = tokeep.copy()
 
+        del_words = []
+
+        for key, occ in enumerate(tokeep[word]):
+            if occ['title'] == title:
+                del tokeep[word][key]
+
+        if len(tokeep[word]) == 0:
+            del_words.append(word)
+        for d in del_words:
+            del tokeep[d]
+        with open(dump_file,'w') as stuff:
+            json.dump(tokeep, stuff, indent=4, sort_keys=True)
 
 #**********************************************************
 #begin calling code and time it

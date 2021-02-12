@@ -1,0 +1,26 @@
+2021-02-12 04:00:44
+[32mCrawled ./test_files/avoiding_compromise.html in 0.4585 seconds[39m
+[32mCrawled ./test_files/subdir02/avoiding_compromise03.htm in 0.5103 seconds[39m
+[32mCrawled ./test_files/subdir02/bodily_exercise03.htm in 0.4889 seconds[39m
+[32mCrawled ./test_files/faithfulness.htm in 1.4799 seconds[39m
+[32mCrawled ./test_files/bodily_exercise.htm in 0.9383 seconds[39m
+[32mCrawled ./test_files/commitment.htm in 1.7318 seconds[39m
+[32mCrawled ./test_files/Christ the Very Form of God.mp3 in 0.0201 seconds[39m
+[33mCrawled 7 files and 3 directories.
+Indexed 2532 words.[39m
+[32mTotal time: 5.637s[39m
+*********************************** end file *********************************** 
+
+2021-02-12 04:01:40
+./test_files/avoiding_compromise.html already crawled
+./test_files/subdir02/avoiding_compromise03.htm already crawled
+./test_files/subdir02/bodily_exercise03.htm already crawled
+[32mCrawled ./test_files/faithfulness.htm in 0.0605 seconds[39m
+[32mCrawled ./test_files/bodily_exercise.htm in 0.0063 seconds[39m
+./test_files/commitment.htm already crawled
+./test_files/Christ the Very Form of God.mp3 already crawled
+[33mCrawled 7 files and 3 directories.
+Indexed 0 words.[39m
+[32mTotal time: 0.07342s[39m
+*********************************** end file *********************************** 
+
