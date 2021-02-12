@@ -118,7 +118,7 @@ def crawl(haystack:str) -> None:
             title = os.path.splitext(os.path.basename(haystack))[0]
             # og_title = list(title)
     else:
-        content, title = os.path.splitext(os.path.basename(haystack))[0]
+        content = title = os.path.splitext(os.path.basename(haystack))[0]
         # content = re.sub(r'[^a-zA-Z\s]+','',content).lower().split()
         # og_content = list(content)
         # og_title = list(content)
@@ -126,24 +126,24 @@ def crawl(haystack:str) -> None:
         # title = " ".join(list(exclude_words(content)))
 
     content = re.sub(r'[^a-zA-Z\s]+','',content).split() # creates list of words, stripped of nonletters
-    s_title = re.sub(r'[^a-zA-Z\s]+','',title).split()
+    s_title = re.sub(r'[^a-zA-Z\s]+','',title).split() # for searching title
     count_dict = {n:content.count(n) for n in set(content)} #creates a dict of words with their wordcount
-    count_title = {n:s_title.count(n) for n in set(s_title)}
+    count_title = {n:s_title.count(n) for n in set(s_title)} # for hits in title
 
     # og_content = list(content)
     exclude_path = list(open('exclude_words.txt').read().splitlines())
-    content = list(set(content) - set(exclude_path))
+    content = list(set(content) - set(exclude_path)) #creates list of valid words
     # content = exclude_words(content)
 
     file_dump = './index/path_dump/'+os.path.splitext(os.path.basename(haystack))[0]+'_dump.json'
-    try:
+    try: #list of valid words to catalogue generated the last time the file was crawled
         with open(file_dump, "r") as fdump:
             old_words = json.load(fdump)
-            removed_words = set(old_words)-set(content)
-            purge_words(removed_words, title)
-            new_words = list(content)
-            content = list(set(content)-set(old_words))
-    except:
+        removed_words = set(old_words)-set(content) #compares old words to incoming words
+        purge_words(removed_words, title) #delete occurences/words which are no longer in use
+        new_words = list(content) #make copy of new words to catalogue for next comparison
+        content = list(set(content)-set(old_words)) #minimize the number of words to catalogue to only new words
+    except: # for first time through. the file_dump.json doesn't exist yet
         new_words = content
 
     with open(file_dump, 'w') as fdump:
@@ -159,42 +159,47 @@ def crawl(haystack:str) -> None:
 
         dump_file = "index/{}_dump.json".format(first_letter)
         if os.path.exists(dump_file) == False:
-            f = open(dump_file, 'w')
-            baseline = {}
-            f.write(json.dumps(baseline))
-            f.close()
+            with open(dump_file, "w") as dump_data:
+                empty = {}
+                json.dump(empty, dump_data)
+        # if os.path.exists(dump_file) == False:
+        #     f = open(dump_file, 'w')
+        #     baseline = {}
+        #     f.write(json.dumps(baseline))
+        #     f.close()
 
         with open(dump_file) as dump_data:
             words_list = json.load(dump_data)
 
-            if word not in words_list:
-                words_list[word] =[]
+        if word not in words_list:
+            words_list[word] = []
 
-            exists = 0
-            for item in words_list[word]:
-                if (item['title'] == title) and (item['score'] == word_score):
-                    exists += 1
+        # exists = 0
+        # for item in words_list[word]:
+        #     if (item['title'] == title) and (item['score'] == word_score):
+        #         exists += 1
+        #
+        # if exists:
+        #     continue
 
-            if exists:
-                continue
+        new_data = {
+            "title":title,
+            "file_path":haystack,
+            "score":word_score,
+            "in_title":in_title,
+            "modified":modified
+        }
 
-            new_data = {
-                "title":title,
-                "file_path":haystack,
-                "score":word_score,
-                "in_title":in_title,
-                "modified":modified
-            }
+        words_list[word].append(new_data)
 
-            words_list[word].append(new_data)
-
-        if exists:
-            continue
+        # if exists:
+        #     continue
         with open(dump_file,'w') as stuff:
              json.dump(words_list, stuff, indent=4, sort_keys=True)
 
-        num_words += 1
+        # num_words += 1
         # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
+    num_words += len(content)
     toc = time.perf_counter()
     print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
 
