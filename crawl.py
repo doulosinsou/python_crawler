@@ -85,42 +85,55 @@ def crawl(haystack:str) -> None:
     }
     :param haystack: str path to file
     """
-    global num_words
-    # print_yellow("about to crawl: "+haystack)
+    global num_words #to count how many words are processed
     tic = time.perf_counter()
-    modified = time.ctime(os.path.getmtime(haystack))
+    modified = time.ctime(os.path.getmtime(haystack)) # when was the file last changed
 
+    #sort which files to search inside and which to search file name only
     with open('include.txt', 'r') as includes:
         text_files = includes.read().lower().splitlines()
+        file_stop = [k for k, n in enumerate(text_files) if n == "non-text:"]
+    inc_list = [w for w in text_files[1:file_stop[0]] if w]
+    # inc_list = []
+    # for lin in text_files:
+    #     if "non-text:" in lin:
+    #         break
+    #     if "text:" in lin:
+    #         continue
+    #     if lin:
+    #         inc_list.append(lin)
 
-    inc_list = []
-    for lin in text_files:
-        if "non-text:" in lin:
-            break
-        if "text:" in lin:
-            continue
-        if lin:
-            inc_list.append(lin)
-
+    # Is the file intended for text searching? Use html parser.
     if any(x in haystack for x in inc_list):
         with open(haystack, 'rb') as file:
             soup = BeautifulSoup(file, 'html.parser')
-            content = str(soup.get_text()).lower()
-            content = re.sub(r'[^a-zA-Z\s]+','',content).split()
-            og_content = list(content)
-            content = exclude_words(content)
-            try:
-                title = soup.find('title').string.lower()
-                og_title = list(title)
-            except:
-                title = os.path.splitext(os.path.basename(haystack))[0]
-                og_title = list(title)
+            content = str(soup.get_text()).lower() #reads text content
+        # content = re.sub(r'[^a-zA-Z\s]+','',content).split() #strips nonletters keeps spaces
+        # og_content = list(content)
+        # content = exclude_words(content)
+        try:
+            title = soup.find('title').string.lower()
+            # og_title = list(title)
+        except:
+            title = os.path.splitext(os.path.basename(haystack))[0]
+            # og_title = list(title)
     else:
-        content = os.path.splitext(os.path.basename(haystack))[0]
-        content = re.sub(r'[^a-zA-Z\s]+','',content).lower().split()
-        og_content = list(content)
-        og_title = list(content)
-        title = " ".join(list(exclude_words(content)))
+        content, title = os.path.splitext(os.path.basename(haystack))[0]
+        # content = re.sub(r'[^a-zA-Z\s]+','',content).lower().split()
+        # og_content = list(content)
+        # og_title = list(content)
+        # title = content
+        # title = " ".join(list(exclude_words(content)))
+
+    content = re.sub(r'[^a-zA-Z\s]+','',content).split() # creates list of words, stripped of nonletters
+    s_title = re.sub(r'[^a-zA-Z\s]+','',title).split()
+    count_dict = {n:content.count(n) for n in set(content)} #creates a dict of words with their wordcount
+    count_title = {n:s_title.count(n) for n in set(s_title)}
+
+    # og_content = list(content)
+    exclude_path = list(open('exclude_words.txt').read().splitlines())
+    content = list(set(content) - set(exclude_path))
+    # content = exclude_words(content)
 
     file_dump = './index/path_dump/'+os.path.splitext(os.path.basename(haystack))[0]+'_dump.json'
     try:
@@ -137,8 +150,10 @@ def crawl(haystack:str) -> None:
         json.dump(new_words, fdump)
 
     for word in content:
-        word_score = count_words(word, og_content)
-        in_title = count_words(word, og_title)
+        # word_score = count_words(word, og_content)
+        # in_title = count_words(word, og_title)
+        word_score = count_dict[word]
+        in_title = count_title[word] if word in count_title else 0
 
         first_letter = str(word[0])
 
