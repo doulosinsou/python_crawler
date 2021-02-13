@@ -37,20 +37,24 @@ def scantree(path:str) -> dict:
     """
 
     # global vars.num_dir
-    exclude_path = list(open(vars.exclude_path).read().splitlines())
-    include_path = list(open(vars.include).read().splitlines())
+    # exclude_path = list(open(vars.exclude_path).read().splitlines())
+    # include_path = list(open(vars.include).read().splitlines())
 
     for entry in os.scandir(path):
         #ignore paths/files on exclude list
-        if any(ex in entry.path for ex in exclude_path):
+        local = "/"+entry.path.split('/')[-1]+"/"
+        if any(ex in local for ex in vars.exclude_all):
+            # print_yellow(entry.path)
             continue
         #recurse through directories
+        # print_green(entry.path)
+
         if entry.is_dir(follow_symlinks=False):
             vars.num_dir += 1
             yield from scantree(entry.path)
         else:
             #ignore file types not on include list
-            if not any(entry.path.lower().endswith("."+inc.split('.')[-1]) for inc in include_path):
+            if not any(entry.path.lower().endswith("."+inc.split('.')[-1]) for inc in vars.include_all):
                 continue
             yield entry
 
@@ -61,8 +65,7 @@ def already_crawled(file:str) -> True:
     :param file: str path of file to crawl
     """
     modified = str(os.path.getmtime(file))
-    crawled = './index/crawled.json'
-    with open(crawled) as cfiles:
+    with open(vars.crawled) as cfiles:
         flist = json.load(cfiles)
     for f in flist:
         fsplit = f.split('_MOD_')
@@ -73,7 +76,7 @@ def already_crawled(file:str) -> True:
             return True
     # if new file or if file has been since modified, create record
     flist.append(file+"_MOD_"+modified)
-    with open(crawled, 'w') as cfiles:
+    with open(vars.crawled, 'w') as cfiles:
         json.dump(flist, cfiles, indent=4, sort_keys=True)
     return False
 
@@ -87,10 +90,11 @@ def crawl(haystack:str) -> None:
     modified = time.ctime(os.path.getmtime(haystack)) # when was the file last changed
 
     #sort which files to search inside and which to search file name only
-    with open(vars.include, 'r') as includes:
-        text_files = includes.read().lower().splitlines()
-        file_stop = [k for k, n in enumerate(text_files) if n == "non-text:"]
-    inc_list = [w for w in text_files[1:file_stop[0]] if w]
+    # with open(vars.include, 'r') as includes:
+    #     text_files = includes.read().lower().splitlines()
+    #     file_stop = [k for k, n in enumerate(text_files) if n == "non-text:"]
+    # inc_list = [w for w in text_files[1:file_stop[0]] if w]
+    inc_list = vars.include_text
 
     # Is the file intended for text searching? Use html parser.
     if any(x in haystack for x in inc_list):
@@ -113,11 +117,11 @@ def crawl(haystack:str) -> None:
     count_dict = {n:content.count(n) for n in set(content)} #creates a dict of words with their wordcount
     count_title = {n:s_title.count(n) for n in set(s_title)} # for hits in title
 
-    exclude_path = list(open(vars.exclude_words).read().splitlines())
-    content = list(set(content) - set(exclude_path)) #creates list of valid words
+    # exclude_path = list(open(vars.exclude_words).read().splitlines())
+    content = list(set(content) - set(vars.exclude_words)) #creates list of valid words
 
     #list of valid words to catalogue generated the last time the file was crawled
-    file_store = './index/path_store/'+os.path.splitext(os.path.basename(haystack))[0]+'_store.json'
+    file_store = vars.index_path+'/path_store/'+os.path.splitext(os.path.basename(haystack))[0]+'_store.json'
     try:
         with open(file_store, "r") as fstore:
             old_words = json.load(fstore)
@@ -137,7 +141,7 @@ def crawl(haystack:str) -> None:
 
         # find/create letter_store
         first_letter = str(word[0])
-        store_file = "index/{}_store.json".format(first_letter)
+        store_file = vars.index_path+"/{}_store.json".format(first_letter)
         if os.path.exists(store_file) == False:
             with open(store_file, "w") as store_data:
                 empty = {}

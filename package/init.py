@@ -5,7 +5,10 @@ from search_functions.crawl import *
 #begin calling code and time it
 date = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
 print(date)
-search_dir = open(vars.my_path, 'r').read().strip()
+# search_dir = open(vars.my_path, 'r').read().strip()
+search_dir = vars.my_path
+# search_dir = os.path.join(os.path.dirname((os.path.abspath(__file__))))+"/test_files"
+# print_red(search_dir)
 
 start_timer = time.perf_counter()
 call_files(search_dir) #this starts it all

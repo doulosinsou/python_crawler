@@ -1,14 +1,14 @@
-2021-02-13 20:12:24
-[32mCrawled ./test_files/avoiding_compromise.html in 0.4026 seconds[39m
-[32mCrawled ./test_files/subdir02/avoiding_compromise03.htm in 0.4631 seconds[39m
-[32mCrawled ./test_files/subdir02/bodily_exercise03.htm in 0.4647 seconds[39m
-[32mCrawled ./test_files/faithfulness.htm in 1.4097 seconds[39m
-[32mCrawled ./test_files/bodily_exercise.htm in 0.8408 seconds[39m
-[32mCrawled ./test_files/commitment.htm in 1.6474 seconds[39m
-[32mCrawled ./test_files/Christ the Very Form of God.mp3 in 0.0115 seconds[39m
-[33mCrawled 7 files from 3 directories.
+2021-02-13 23:38:27
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html in 0.3295 seconds[39m
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm in 0.4705 seconds[39m
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm in 0.4891 seconds[39m
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm in 1.4584 seconds[39m
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm in 0.8393 seconds[39m
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm in 1.7568 seconds[39m
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/Christ the Very Form of God.mp3 in 0.0144 seconds[39m
+[33mCrawled 7 files from 1 directories.
 Indexed 2524 words.
 Purged 0 words[39m
-[32mTotal time: 5.246s[39m
+[32mTotal time: 5.362s[39m
 *********************************** end file *********************************** 
 

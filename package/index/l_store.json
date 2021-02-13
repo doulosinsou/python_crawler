@@ -1,21 +1,21 @@
 {
     "lack": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -24,7 +24,7 @@
     ],
     "lamb": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -33,14 +33,14 @@
     ],
     "land": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -49,21 +49,21 @@
     ],
     "language": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -72,14 +72,14 @@
     ],
     "languages": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -88,21 +88,21 @@
     ],
     "later": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -111,14 +111,14 @@
     ],
     "latter": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -127,7 +127,7 @@
     ],
     "law": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -136,14 +136,14 @@
     ],
     "lay": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -152,7 +152,7 @@
     ],
     "lazy": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -161,28 +161,28 @@
     ],
     "lead": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -191,21 +191,21 @@
     ],
     "leaders": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -214,14 +214,14 @@
     ],
     "leads": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -230,35 +230,35 @@
     ],
     "learn": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -267,21 +267,21 @@
     ],
     "leave": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -290,14 +290,14 @@
     ],
     "leaving": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -306,21 +306,21 @@
     ],
     "led": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -329,28 +329,28 @@
     ],
     "less": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -359,7 +359,7 @@
     ],
     "lesser": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -368,28 +368,28 @@
     ],
     "lesson": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -398,14 +398,14 @@
     ],
     "lessons": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -414,14 +414,14 @@
     ],
     "lest": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -430,7 +430,7 @@
     ],
     "letter": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -439,7 +439,7 @@
     ],
     "letters": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -448,14 +448,14 @@
     ],
     "liberties": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -464,14 +464,14 @@
     ],
     "lies": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -480,42 +480,42 @@
     ],
     "life": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 10,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 7,
@@ -524,14 +524,14 @@
     ],
     "likely": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -540,7 +540,7 @@
     ],
     "likeness": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -549,14 +549,14 @@
     ],
     "line": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -565,7 +565,7 @@
     ],
     "lip": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -574,21 +574,21 @@
     ],
     "little": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -597,21 +597,21 @@
     ],
     "live": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 5,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 5,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 5,
@@ -620,7 +620,7 @@
     ],
     "lived": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -629,28 +629,28 @@
     ],
     "lives": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 8,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 7,
@@ -659,21 +659,21 @@
     ],
     "living": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
@@ -682,7 +682,7 @@
     ],
     "loins": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -691,7 +691,7 @@
     ],
     "long": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -700,28 +700,28 @@
     ],
     "look": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 5,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -730,14 +730,14 @@
     ],
     "looking": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -746,28 +746,28 @@
     ],
     "lord": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 17,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 9,
@@ -776,28 +776,28 @@
     ],
     "lords": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
@@ -806,21 +806,21 @@
     ],
     "lose": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -829,7 +829,7 @@
     ],
     "loses": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -838,14 +838,14 @@
     ],
     "losing": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -854,14 +854,14 @@
     ],
     "lost": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -870,7 +870,7 @@
     ],
     "loud": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -879,14 +879,14 @@
     ],
     "louw": [
         {
-            "file_path": "./test_files/subdir02/bodily_exercise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "bodily exercise"
         },
         {
-            "file_path": "./test_files/bodily_exercise.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
@@ -895,28 +895,28 @@
     ],
     "love": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "faithfulness"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 4,
@@ -925,7 +925,7 @@
     ],
     "loved": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -934,7 +934,7 @@
     ],
     "loves": [
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -943,21 +943,21 @@
     ],
     "loyal": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
@@ -966,14 +966,14 @@
     ],
     "loyalties": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
@@ -982,7 +982,7 @@
     ],
     "loyalty": [
         {
-            "file_path": "./test_files/faithfulness.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
@@ -991,21 +991,21 @@
     ],
     "luke": [
         {
-            "file_path": "./test_files/avoiding_compromise.html",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/subdir02/avoiding_compromise03.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
             "title": "avoiding compromise"
         },
         {
-            "file_path": "./test_files/commitment.htm",
+            "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
