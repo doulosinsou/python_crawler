@@ -1,11 +1,7 @@
-# import search_functions.functions as functions
+
 from search_functions.functions import pathit
 from search_functions.functions import getconf
-# from configparser import ConfigParser
-#
-# configur = ConfigParser()
-# file = pathit('../.config')
-# configur.read(file)
+
 
 my_path = pathit(getconf('location','search_path'), ROOT=True)
 

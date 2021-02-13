@@ -6,7 +6,6 @@ def pathit(path:str, ROOT=False):
     if ROOT:
         file = os.path.join(os.getcwd(), path)
         return file
-
     else:
         THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
         my_file = os.path.join(THIS_FOLDER, path)

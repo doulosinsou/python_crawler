@@ -19,14 +19,12 @@ def call_files(dir="./test_files") -> None:
     """
     # global vars.num_files
     for files in scantree(dir):
-        rel_file = os.path.relpath(files.path, dir)
-        local_path = "{}/{}".format(dir,rel_file)
         #to ignore unnecessary repeats
-        if already_crawled(local_path):
-            print(local_path+" already crawled")
+        if already_crawled(files.path):
+            print(files.path+" already crawled")
             continue
         vars.num_files += 1
-        crawl(local_path)
+        crawl(files.path)
 
 
 def scantree(path:str) -> dict:
@@ -36,10 +34,6 @@ def scantree(path:str) -> dict:
     :return: obj with data about the files, namely: file path
     """
 
-    # global vars.num_dir
-    # exclude_path = list(open(vars.exclude_path).read().splitlines())
-    # include_path = list(open(vars.include).read().splitlines())
-
     for entry in os.scandir(path):
         #ignore paths/files on exclude list
         local = "/"+entry.path.split('/')[-1]+"/"
@@ -47,8 +41,6 @@ def scantree(path:str) -> dict:
             # print_yellow(entry.path)
             continue
         #recurse through directories
-        # print_green(entry.path)
-
         if entry.is_dir(follow_symlinks=False):
             vars.num_dir += 1
             yield from scantree(entry.path)
@@ -90,10 +82,6 @@ def crawl(haystack:str) -> None:
     modified = time.ctime(os.path.getmtime(haystack)) # when was the file last changed
 
     #sort which files to search inside and which to search file name only
-    # with open(vars.include, 'r') as includes:
-    #     text_files = includes.read().lower().splitlines()
-    #     file_stop = [k for k, n in enumerate(text_files) if n == "non-text:"]
-    # inc_list = [w for w in text_files[1:file_stop[0]] if w]
     inc_list = vars.include_text
 
     # Is the file intended for text searching? Use html parser.
@@ -207,20 +195,3 @@ def purge_words(removed:set, title:str) -> None:
         with open(store_file,'w') as stuff:
             json.dump(tokeep, stuff, indent=4, sort_keys=True)
     num_purge += len(removed)
-
-#**********************************************************
-# #begin calling code and time it
-# date = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
-# print(date)
-# search_dir = open('my_path.txt', 'r').read().strip()
-#
-# start_timer = time.perf_counter()
-# call_files(search_dir) #this starts it all
-# end_timer = time.perf_counter()
-# total_time = end_timer-start_timer
-#
-# print_yellow("Crawled {} files from {} directories.\nIndexed {} words.\nPurged {} words".format(num_files, num_dir, num_words, num_purge))
-# print_green("Total time: {:0.4}s".format(total_time))
-#
-# endfile = " end file ".center(80, "*")
-# print(endfile, "\n")
