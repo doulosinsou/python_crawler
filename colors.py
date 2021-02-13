@@ -6,6 +6,8 @@ def print_green(txt:str) -> None:
     print(Color.F_Green+txt+Color.F_Default)
 
 
+def print_red(txt:str) -> None:
+    print(Color.F_White+Color.B_Red+txt+Color.B_Default+Color.F_Default)
 
 class Color:
     # Foreground

@@ -25,8 +25,8 @@ for files in os.scandir('./index'):
     if 'crawled.json' in files.path:
         continue
     print('Scanning: '+files.path)
-    with open(files.path, 'r') as z_dump:
-        wlist = json.load(z_dump)
+    with open(files.path, 'r') as z_store:
+        wlist = json.load(z_store)
     del_words =[]
     for word, occlist in wlist.items():
         for ind, occ in enumerate(occlist):
@@ -41,8 +41,8 @@ for files in os.scandir('./index'):
             del_word_count += 1
     for d in del_words:
         del wlist[d]
-    with open(files.path, 'w') as z_dump:
-        json.dump(wlist, z_dump, indent=4, sort_keys=True)
+    with open(files.path, 'w') as z_store:
+        json.dump(wlist, z_store, indent=4, sort_keys=True)
 
 end_timer = time.perf_counter()
 total_time = end_timer-start_timer
