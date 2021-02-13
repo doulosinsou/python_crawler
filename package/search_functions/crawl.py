@@ -8,17 +8,16 @@ from bs4 import BeautifulSoup
 from search_functions.colors import *
 from search_functions.log import *
 
-num_files = 0
-num_dir = 0
-num_words = 0
-num_purge = 0
+import search_functions.vars as vars
+import search_functions.functions as functions
+# from search_functions.vars import *
 
 def call_files(dir="./test_files") -> None:
     """
     Compiles each file in directory. Sends to `crawl()` for parsing.
     :param dir: str of relative directory to search
     """
-    global num_files
+    # global vars.num_files
     for files in scantree(dir):
         rel_file = os.path.relpath(files.path, dir)
         local_path = "{}/{}".format(dir,rel_file)
@@ -26,7 +25,7 @@ def call_files(dir="./test_files") -> None:
         if already_crawled(local_path):
             print(local_path+" already crawled")
             continue
-        num_files += 1
+        vars.num_files += 1
         crawl(local_path)
 
 
@@ -37,9 +36,9 @@ def scantree(path:str) -> dict:
     :return: obj with data about the files, namely: file path
     """
 
-    global num_dir
-    exclude_path = list(open('exclude_path.txt').read().splitlines())
-    include_path = list(open("include.txt").read().splitlines())
+    # global vars.num_dir
+    exclude_path = list(open(vars.exclude_path).read().splitlines())
+    include_path = list(open(vars.include).read().splitlines())
 
     for entry in os.scandir(path):
         #ignore paths/files on exclude list
@@ -47,7 +46,7 @@ def scantree(path:str) -> dict:
             continue
         #recurse through directories
         if entry.is_dir(follow_symlinks=False):
-            num_dir += 1
+            vars.num_dir += 1
             yield from scantree(entry.path)
         else:
             #ignore file types not on include list
@@ -83,12 +82,12 @@ def crawl(haystack:str) -> None:
     """Creates an index for every significant word used in supplied file. Scores the word by how many times it is used. Tracks title score and modification date of file.
     :param haystack: str path to file
     """
-    global num_words #to count how many words are processed
+    # global vars.num_words #to count how many words are processed
     tic = time.perf_counter()
     modified = time.ctime(os.path.getmtime(haystack)) # when was the file last changed
 
     #sort which files to search inside and which to search file name only
-    with open('include.txt', 'r') as includes:
+    with open(vars.include, 'r') as includes:
         text_files = includes.read().lower().splitlines()
         file_stop = [k for k, n in enumerate(text_files) if n == "non-text:"]
     inc_list = [w for w in text_files[1:file_stop[0]] if w]
@@ -114,7 +113,7 @@ def crawl(haystack:str) -> None:
     count_dict = {n:content.count(n) for n in set(content)} #creates a dict of words with their wordcount
     count_title = {n:s_title.count(n) for n in set(s_title)} # for hits in title
 
-    exclude_path = list(open('exclude_words.txt').read().splitlines())
+    exclude_path = list(open(vars.exclude_words).read().splitlines())
     content = list(set(content) - set(exclude_path)) #creates list of valid words
 
     #list of valid words to catalogue generated the last time the file was crawled
@@ -167,7 +166,7 @@ def crawl(haystack:str) -> None:
 
         #optional logging, in case you were super interested
         # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
-    num_words += len(content)
+    vars.num_words += len(content)
     toc = time.perf_counter()
     print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
 
