@@ -1,5 +1,5 @@
 from configparser import ConfigParser
-
+import tkinter
 
 def pathit(path:str, ROOT=False):
     import os

@@ -2,8 +2,10 @@
 from search_functions.functions import pathit
 from search_functions.functions import getconf
 
-
-my_path = pathit(getconf('location','search_path'), ROOT=True)
+abs_path = getconf('location','search_abs')
+rel_path = getconf('location','search_rel')
+relpath = pathit(rel_path, ROOT=True)
+my_path  = abs_path if not rel_path else relpath
 
 index_path = pathit(getconf('location','index_path'), ROOT=True)
 

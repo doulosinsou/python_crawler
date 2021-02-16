@@ -122,7 +122,7 @@ def crawl(haystack:str) -> None:
 
     with open(file_store, 'w') as fstore: #create or overwrite file_store for list (set) of words to search
         json.dump(new_words, fstore)
-
+    
     for word in content:
         word_score = count_dict[word]
         in_title = count_title[word] if word in count_title else 0
