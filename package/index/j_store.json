@@ -5,7 +5,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "jacob"
         }
     ],
     "james": [
@@ -14,21 +15,24 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 4,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "james"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 4,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "james"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "james"
         }
     ],
     "jealous": [
@@ -37,7 +41,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "jealous"
         }
     ],
     "jeroboam": [
@@ -46,14 +51,16 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jeroboam"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jeroboam"
         }
     ],
     "jerusalem": [
@@ -62,21 +69,24 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jerusalem"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jerusalem"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "jerusalem"
         }
     ],
     "jesus": [
@@ -85,42 +95,48 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jesus"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jesus"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "bodily exercise"
+            "title": "bodily exercise",
+            "word": "jesus"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 9,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "jesus"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "bodily exercise"
+            "title": "bodily exercise",
+            "word": "jesus"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "jesus"
         }
     ],
     "jewish": [
@@ -129,14 +145,16 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jewish"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "jewish"
         }
     ],
     "job": [
@@ -145,14 +163,16 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "job"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 4,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "job"
         }
     ],
     "jobs": [
@@ -161,7 +181,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "jobs"
         }
     ],
     "john": [
@@ -170,28 +191,32 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "john"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "john"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "john"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "john"
         }
     ],
     "joseph": [
@@ -200,7 +225,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "joseph"
         }
     ],
     "josephs": [
@@ -209,14 +235,16 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "josephs"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "avoiding compromise"
+            "title": "avoiding compromise",
+            "word": "josephs"
         }
     ],
     "joy": [
@@ -225,14 +253,16 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "bodily exercise"
+            "title": "bodily exercise",
+            "word": "joy"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "bodily exercise"
+            "title": "bodily exercise",
+            "word": "joy"
         }
     ],
     "judah": [
@@ -241,7 +271,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "judah"
         }
     ],
     "judges": [
@@ -250,7 +281,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "judges"
         }
     ],
     "judgments": [
@@ -259,7 +291,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "judgments"
         }
     ],
     "june": [
@@ -268,7 +301,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 2,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "june"
         }
     ],
     "just": [
@@ -277,7 +311,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "just"
         }
     ]
 }

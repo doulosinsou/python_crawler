@@ -5,7 +5,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "year"
         }
     ],
     "yesterday": [
@@ -14,7 +15,8 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "yesterday"
         }
     ],
     "yourself": [
@@ -23,28 +25,32 @@
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
-            "title": "bodily exercise"
+            "title": "bodily exercise",
+            "word": "yourself"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 3,
-            "title": "faithfulness"
+            "title": "faithfulness",
+            "word": "yourself"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 6,
-            "title": "bodily exercise"
+            "title": "bodily exercise",
+            "word": "yourself"
         },
         {
             "file_path": "/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm",
             "in_title": 0,
             "modified": "Sat Feb 13 13:11:40 2021",
             "score": 1,
-            "title": "commitment"
+            "title": "commitment",
+            "word": "yourself"
         }
     ]
 }

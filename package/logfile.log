@@ -1,112 +1,158 @@
-2021-02-16 19:09:55
+2021-02-17 19:40:15
 [97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html in 0.4011 seconds[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm in 0.5607 seconds[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm in 0.4896 seconds[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm in 1.5143 seconds[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm in 0.8769 seconds[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm in 1.7733 seconds[39m
-[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/Christ the Very Form of God.mp3 in 0.0113 seconds[39m
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html in 0.0794 seconds[39m
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm in 0.1981 seconds[39m
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm in 0.0969 seconds[39m
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm in 0.1688 seconds[39m
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm in 0.0935 seconds[39m
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm in 0.1269 seconds[39m
+True
+True
+True
+[32mCrawled /Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/Christ the Very Form of God.mp3 in 0.0180 seconds[39m
 [33mCrawled 7 files from 1 directories.
-Indexed 2524 words.
+Indexed 2523 words.
 Purged 0 words[39m
-[32mTotal time: 5.634s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:10:20
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/avoiding_compromise.html already crawled
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/avoiding_compromise03.htm already crawled
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/subdir02/bodily_exercise03.htm already crawled
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/faithfulness.htm already crawled
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/bodily_exercise.htm already crawled
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/commitment.htm already crawled
-/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files/Christ the Very Form of God.mp3 already crawled
-[33mCrawled 0 files from 1 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 0.001158s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:10:51
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package//Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-2021-02-16 19:13:34
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.324e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:13:46
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.392e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:14:04
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.26e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:16:37
-[97m[41mtest_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.337e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:16:51
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.316e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:17:05
-[97m[41mtest_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.355e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:17:13
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/nope[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 2.284e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:17:45
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.385e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:19:38
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/nope[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.656e-05s[39m
-*********************************** end file *********************************** 
-
-2021-02-16 19:19:46
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/package/test_files[49m[39m
-[33mCrawled 0 files from 0 directories.
-Indexed 0 words.
-Purged 0 words[39m
-[32mTotal time: 1.347e-05s[39m
+[32mTotal time: 0.7882s[39m
 *********************************** end file *********************************** 
 

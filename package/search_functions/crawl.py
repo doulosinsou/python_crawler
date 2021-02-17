@@ -25,6 +25,7 @@ def call_files(dir="./test_files") -> None:
             continue
         vars.num_files += 1
         crawl(files.path)
+        # return
 
 
 def scantree(path:str) -> dict:
@@ -77,7 +78,7 @@ def crawl(haystack:str) -> None:
     """Creates an index for every significant word used in supplied file. Scores the word by how many times it is used. Tracks title score and modification date of file.
     :param haystack: str path to file
     """
-    # global vars.num_words #to count how many words are processed
+
     tic = time.perf_counter()
     modified = time.ctime(os.path.getmtime(haystack)) # when was the file last changed
 
@@ -98,14 +99,13 @@ def crawl(haystack:str) -> None:
         except: # if file has no html title, treat file name as title
             title = os.path.splitext(os.path.basename(haystack))[0]
     else: # If file is not intended to be read, treat the title as extent of search
-        content = title = os.path.splitext(os.path.basename(haystack))[0]
+        content = title = os.path.splitext(os.path.basename(haystack))[0].lower()
 
     content = re.sub(r'[^a-zA-Z\s]+','',content).split() # creates list of words, stripped of nonletters
     s_title = re.sub(r'[^a-zA-Z\s]+','',title).split() # for searching title
     count_dict = {n:content.count(n) for n in set(content)} #creates a dict of words with their wordcount
     count_title = {n:s_title.count(n) for n in set(s_title)} # for hits in title
 
-    # exclude_path = list(open(vars.exclude_words).read().splitlines())
     content = list(set(content) - set(vars.exclude_words)) #creates list of valid words
 
     #list of valid words to catalogue generated the last time the file was crawled
@@ -122,39 +122,66 @@ def crawl(haystack:str) -> None:
 
     with open(file_store, 'w') as fstore: #create or overwrite file_store for list (set) of words to search
         json.dump(new_words, fstore)
-    
-    for word in content:
-        word_score = count_dict[word]
-        in_title = count_title[word] if word in count_title else 0
 
-        # find/create letter_store
-        first_letter = str(word[0])
-        store_file = vars.index_path+"/{}_store.json".format(first_letter)
-        if os.path.exists(store_file) == False:
-            with open(store_file, "w") as store_data:
-                empty = {}
-                json.dump(empty, store_data)
+    # create new list of first letters used
+    fletter = {l[0] for l in content}
+    for l in fletter:
 
-        with open(store_file) as store_data:
-            words_list = json.load(store_data)
+        if vars.sql_database:
+            functions.create(l)
+            sql_list = []
+        if vars.local_database:
+            # find/create LOCAL letter_store
+            store_file = vars.index_path+"/{}_store.json".format(l)
+            if os.path.exists(store_file) == False:
+                with open(store_file, "w") as store_data:
+                    empty = {}
+                    json.dump(empty, store_data)
 
-        #if the word doesn't exist in store (yet), make blank list
-        if word not in words_list:
-            words_list[word] = []
+            # get existing data from LOCAL letter store
+            with open(store_file) as store_data:
+                words_list = json.load(store_data)
 
-        new_data = {
-            "title":title,
-            "file_path":haystack,
-            "score":word_score,
-            "in_title":in_title,
-            "modified":modified
-        }
+        if not vars.sql_database and not vars.local_database:
+            print("No database is enabled. Chack the .config file and enable either sql or local storage")
+            return
 
-        #add new data to array of word in word_store
-        words_list[word].append(new_data)
+        for word in content:
+            # only append the words_list for words of same first letter
+            if word[0] != l:
+                continue
+            word_score = count_dict[word]
+            in_title = count_title[word] if word in count_title else 0
 
-        with open(store_file,'w') as stuff:
-             json.dump(words_list, stuff, indent=4, sort_keys=True)
+            #add new data to array of word in word_store
+            if vars.sql_database:
+                new_data = (word, title, haystack, word_score, in_title, modified)
+                # sql uses list of tuples
+                sql_list.append(new_data)
+
+            if vars.local_database:
+                #if the word doesn't exist in LOCAL store (yet), make blank list
+                if word not in words_list:
+                    words_list[word] = []
+
+                new_data = {
+                    "word":word,
+                    "title":title,
+                    "file_path":haystack,
+                    "score":word_score,
+                    "in_title":in_title,
+                    "modified":modified
+                }
+                words_list[word].append(new_data)
+
+        if vars.sql_database:
+            unpacked = ", ".join(map(str,sql_list))
+            functions.postit(l, unpacked)
+
+
+        if vars.local_database:
+            with open(store_file,'w') as stuff:
+                 json.dump(words_list, stuff, indent=4, sort_keys=True)
 
         #optional logging, in case you were super interested
         # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
@@ -169,7 +196,7 @@ def purge_words(removed:set, title:str) -> None:
     :param removed: a set of words to remove from record
     :param title: the title of the page to remove record from
     """
-    global num_purge
+
     #ignore empty requests
     if not removed:
         return
@@ -194,4 +221,4 @@ def purge_words(removed:set, title:str) -> None:
             del tokeep[d]
         with open(store_file,'w') as stuff:
             json.dump(tokeep, stuff, indent=4, sort_keys=True)
-    num_purge += len(removed)
+    vars.num_purge += len(removed)

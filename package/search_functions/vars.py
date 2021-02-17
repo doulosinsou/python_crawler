@@ -18,6 +18,9 @@ exclude_words = open(pathit('exclude_words.txt')).read().splitlines()
 
 crawled = pathit('index/crawled.json', ROOT=True)
 
+local_database = getconf("database", "local", bool=True)
+sql_database = getconf("database", "sql", bool=True)
+
 num_files = 0
 num_dir = 0
 num_words = 0

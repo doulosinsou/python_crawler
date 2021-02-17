@@ -6,6 +6,7 @@ Unpack zip onto Python 3 enabled directory
 
 Install BeautifulSoup4 (tested with version 4.9.3)
 `pip install beautifulsoup4`
+`pip install mysql-connector` (if using sql db)
 
 Use imports:
 ```

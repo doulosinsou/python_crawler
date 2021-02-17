@@ -1,6 +1,7 @@
 import os
 import json
-
+from search_functions.functions import droptables
+import mysql.connector
 
 def scantree(path:str) -> dict:
     """Recursively yield DirEntry objects for given directory.
@@ -36,3 +37,5 @@ for f in scantree(dir):
         print("successful")
 
 log = open('logfile.log', 'w').close()
+
+# droptables()
