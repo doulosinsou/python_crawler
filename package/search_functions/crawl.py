@@ -15,7 +15,7 @@ import search_functions.functions as functions
 def call_files(dir="./test_files") -> None:
     """
     Compiles each file in directory. Sends to `crawl()` for parsing.
-    :param dir: str of relative directory to search
+    :param dir: str of directory to search
     """
     # global vars.num_files
     for files in scantree(dir):
@@ -127,24 +127,16 @@ def crawl(haystack:str) -> None:
     fletter = {l[0] for l in content}
     for l in fletter:
 
-        if vars.sql_database:
-            functions.create(l)
-            sql_list = []
-        if vars.local_database:
-            # find/create LOCAL letter_store
-            store_file = vars.index_path+"/{}_store.json".format(l)
-            if os.path.exists(store_file) == False:
-                with open(store_file, "w") as store_data:
-                    empty = {}
-                    json.dump(empty, store_data)
+        # find/create LOCAL letter_store
+        store_file = vars.index_path+"/{}_store.json".format(l)
+        if os.path.exists(store_file) == False:
+            with open(store_file, "w") as store_data:
+                empty = {}
+                json.dump(empty, store_data)
 
-            # get existing data from LOCAL letter store
-            with open(store_file) as store_data:
-                words_list = json.load(store_data)
-
-        if not vars.sql_database and not vars.local_database:
-            print("No database is enabled. Chack the .config file and enable either sql or local storage")
-            return
+        # get existing data from LOCAL letter store
+        with open(store_file) as store_data:
+            words_list = json.load(store_data)
 
         for word in content:
             # only append the words_list for words of same first letter
@@ -153,35 +145,21 @@ def crawl(haystack:str) -> None:
             word_score = count_dict[word]
             in_title = count_title[word] if word in count_title else 0
 
-            #add new data to array of word in word_store
-            if vars.sql_database:
-                new_data = (word, title, haystack, word_score, in_title, modified)
-                # sql uses list of tuples
-                sql_list.append(new_data)
+            #if the word doesn't exist in LOCAL store (yet), make blank list
+            if word not in words_list:
+                words_list[word] = []
 
-            if vars.local_database:
-                #if the word doesn't exist in LOCAL store (yet), make blank list
-                if word not in words_list:
-                    words_list[word] = []
+            new_data = {
+                "title":title,
+                "file_path":haystack,
+                "score":word_score,
+                "in_title":in_title,
+                "modified":modified
+            }
+            words_list[word].append(new_data)
 
-                new_data = {
-                    "word":word,
-                    "title":title,
-                    "file_path":haystack,
-                    "score":word_score,
-                    "in_title":in_title,
-                    "modified":modified
-                }
-                words_list[word].append(new_data)
-
-        if vars.sql_database:
-            unpacked = ", ".join(map(str,sql_list))
-            functions.postit(l, unpacked)
-
-
-        if vars.local_database:
-            with open(store_file,'w') as stuff:
-                 json.dump(words_list, stuff, indent=4, sort_keys=True)
+        with open(store_file,'w') as stuff:
+             json.dump(words_list, stuff, indent=4, sort_keys=True)
 
         #optional logging, in case you were super interested
         # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)

@@ -1,9 +1,27 @@
-words = ['ascend', 'apples', 'elephant', 'banana', 'bone', 'zebras', 'zoo']
-fletter = {l[0] for l in words}
+my_dict = {
+    'a': [{
+        'adam': "apple",
+        'admiral': "akbar"
+    },
+        {
+        'agent': 'able',
+        'argument': 'amplify'
+    }
+    ],
+    'b': [{
+        'barry': 'banana',
+        'blury': 'binks'
+    },
+        {
+        'babyface': 'brow',
+        'blue': 'bonnet'
+    }
+    ]
+}
 
-for l in fletter:
-    group=[]
-    for w in words:
-        if w[0] == l:
-            group.append(w)
-    print(group)
+
+
+more = {'a':[{'colonel':'crumpet'}]}
+my_dict.update(my_dict.get('a', more))
+
+print(my_dict)
