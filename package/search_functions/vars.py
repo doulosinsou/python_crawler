@@ -11,15 +11,11 @@ index_path = pathit(getconf('location','index_path'), ROOT=True)
 
 exclude_all = getconf('exclude','paths', line=True)+getconf('exclude','files', line=True)
 include_text = getconf('include','text',line=True)
-
 include_all = getconf('include', 'non-text',line=True)+include_text
 
 exclude_words = open(pathit('exclude_words.txt')).read().splitlines()
 
 crawled = pathit('index/crawled.json', ROOT=True)
-
-local_database = getconf("database", "local", bool=True)
-sql_database = getconf("database", "sql", bool=True)
 
 num_files = 0
 num_dir = 0

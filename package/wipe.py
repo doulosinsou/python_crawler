@@ -1,5 +1,6 @@
 import os
 import json
+import search_functions.vars as vars
 
 
 def scantree(path:str) -> dict:
@@ -15,7 +16,8 @@ def scantree(path:str) -> dict:
             yield entry
 
 
-dir = os.getcwd()+"/index"
+# dir = os.getcwd()+"/index"
+dir = vars.index_path
 for f in scantree(dir):
     if 'crawled.json' in f.path:
         with open(f.path,'w') as crawled:
