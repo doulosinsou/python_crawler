@@ -6,9 +6,8 @@ Unpack zip onto Python 3 enabled directory
 
 Install BeautifulSoup4 (tested with version 4.9.3)
 `pip install beautifulsoup4`
-`pip install mysql-connector` (if using sql db)
 
-Use imports:
+Uses imports:
 ```
 import os
 import re
@@ -17,12 +16,11 @@ import json
 import time
 ```
 
-
 ###Update directory to search
-Open `my_path.txt` . Enter relative or absolute path of directory to search. (Use `./` for relative path)
+Open `.config`. Use `[location]`. Enter absolute path of directory to search in `search_abs` or relative path in `search_rel`. (Do not prepend `/` on relative path.)
 
 ###Exclude certain files/folders
-Open `exclude_path.txt` . Write folders, file names, or openings of file/folder names you wish to exclude from the crawl.
+Open `.config` . Use `[exclude]`. In `paths=` Write folders or openings of folder names you wish to exclude from the crawl. In `files=` write the files or openings of file names you wish to exclude.
 
 Example: The following does not crawl these files:
 ./my_path/subdir/myfile.txt
@@ -31,12 +29,15 @@ Example: The following does not crawl these files:
 ./my_path/_alsoskipped.htm
 
 ```
-/subdir/
-skip_me.htm
-/_
+path=
+  /subdir/
+  /_
+file=
+  skip_me.htm
 ```
+
 ###Include file types you want to crawl
-Open `include.txt` . Two sections in the files are: 'Text:' and 'Non-text:'. Write dot + extension of files you want to crawl on new line in 'Text' section.
+Open `.config`. Use `[include]`. Two sections in the files are: 'Text:' and 'Non-text:'. Write dot + extension of files you want to crawl on new line in 'Text' section. All other file types you add to 'non-text' will use only the title of the file as it's search.
 
 Example:
 ```
@@ -52,7 +53,7 @@ __note: Non-text files only catalogue its own title__
 The file `listen_to_jazz.mp3` will scrape the words 'listen', 'to', 'jazz'.
 
 ###Exclude common words
-Update `exclude_words.txt` for specific words you want to not scrape. If you want to resort the list or purge duplicates, run `sort_ex_words.py`.
+Update `/search_functions/exclude_words.txt` for specific words you want to not scrape. If you want to resort the list or purge duplicates, run `sort_ex_words.py`.
 
 ##Run
 Run `crawl.py` to scrape words from directory and build store files.
