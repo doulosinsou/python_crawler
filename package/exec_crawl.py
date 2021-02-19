@@ -18,17 +18,3 @@ print_green("Total time: {:0.4}s".format(total_time))
 
 endfile = " end file ".center(80, "*")
 print(endfile, "\n")
-
-if vars.sql_database:
-    print("Would you like to post this data to your mysql database at this time? (it may take a few minutes)")
-    print("type 'yes' or 'no' : ")
-    confirm_sql = input()
-    if str(confirm_sql.lower()) == 'yes':
-        import subprocess
-        file = functions.pathit('test.py')
-        exec(open("search_functions/test.py").read())
-        # subprocess.run('search_functions/test.py', shell=True)
-        # os.execl('search_functions/test.py', "njlnj")
-        print("End of mysql process")
-    else:
-        print('No sql at this time')
