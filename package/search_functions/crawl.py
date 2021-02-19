@@ -17,7 +17,7 @@ def call_files(dir="./test_files") -> None:
     Compiles each file in directory. Sends to `crawl()` for parsing.
     :param dir: str of directory to search
     """
-    # global vars.num_files
+
     for files in scantree(dir):
         #to ignore unnecessary repeats
         if already_crawled(files.path):
@@ -25,7 +25,7 @@ def call_files(dir="./test_files") -> None:
             continue
         vars.num_files += 1
         crawl(files.path)
-        # return
+        # return #end after first file crawled
 
 
 def scantree(path:str) -> dict:

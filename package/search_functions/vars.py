@@ -2,6 +2,7 @@
 from search_functions.functions import pathit
 from search_functions.functions import getconf
 
+# Assigns path to search. relative path is dominant
 abs_path = getconf('location','search_abs')
 rel_path = getconf('location','search_rel')
 relpath = pathit(rel_path, ROOT=True)
