@@ -59,16 +59,26 @@ def already_crawled(file:str) -> True:
     Reads/creates list of files crawled by this program. Used to ignore future crawls if the file remains unmodified from previous crawl.
     :param file: str path of file to crawl
     """
-    modified = str(os.path.getmtime(file))
+    modified = os.path.getmtime(file)
     # print("SELECT * FROM crawled WHERE path="+file+" AND mod="+modified)
-    exists= sl.select("SELECT * FROM crawled WHERE path='"+file+"' AND mod="+modified,
+    exists= sl.select("SELECT rowid, mod FROM crawled WHERE path='"+file+"' LIMIT 1",
     fetchall=False)
     # if the filename matches and the modified date is unchanged
+
     if exists:
-        return True
-    # if new file or if file has been since modified, create record
+        if exists[1] == modified:
+            return True
+    #if file matches but has been since modified
+        else:
+            update = "UPDATE crawled SET mod = {} WHERE rowid={}".format(modified, exists[0])
+            sl.c.execute(update)
+            vars.current_id = exists[0]
+            sl.commit()
+            return False
+    # if new file create record
     newcrawled = (file, "None", modified, "None")
     sl.addRow('crawled', newcrawled)
+    vars.current_id = sl.id()[0]
     sl.commit()
     return False
 
@@ -108,66 +118,63 @@ def crawl(haystack:str) -> None:
     content = list(set(content) - set(vars.exclude_words)) #creates list of valid words
 
     #list of valid words to catalogue generated the last time the file was crawled
-    file_store = vars.index_path+'/path_store/'+os.path.splitext(os.path.basename(haystack))[0]+'_store.json'
-    try:
-        with open(file_store, "r") as fstore:
-            old_words = json.load(fstore)
+    sel = "SELECT list FROM crawled WHERE rowid="+str(vars.current_id)
+    old_data = sl.select(sel, fetchall=False)
+    # print(old_data)
+
+    if old_data[0] != "None":
+        old_words = json.loads(old_data[0])
         removed_words = set(old_words)-set(content) #compares old words to incoming words
-        purge_words(removed_words, title) #delete occurences/words which are no longer in use
+        purge_words(removed_words, vars.current_id) #delete occurences/words which are no longer in use
         new_words = list(content) #make copy of new words to catalogue for next comparison
         content = list(set(content)-set(old_words)) #minimize the number of words to catalogue: only new words
-    except: # for first time through. the file_store.json doesn't exist yet
+    else: # for first time through. the file_store.json doesn't exist yet
         new_words = content
 
-    with open(file_store, 'w') as fstore: #create or overwrite file_store for list (set) of words to search
-        json.dump(new_words, fstore)
+    blob = json.dumps(new_words)
+    update = "UPDATE crawled SET list=?, title='{}' WHERE rowid={}".format(title, vars.current_id)
+    sl.c.execute(update, (blob,))
+    sl.commit()
 
-    # create new list of first letters used
     fletter = {l[0] for l in content}
     for l in fletter:
-
-        # find/create LOCAL letter_store
-        store_file = vars.index_path+"/{}_store.json".format(l)
-        if os.path.exists(store_file) == False:
-            with open(store_file, "w") as store_data:
-                empty = {}
-                json.dump(empty, store_data)
-
-        # get existing data from LOCAL letter store
-        with open(store_file) as store_data:
-            words_list = json.load(store_data)
-
-        for word in content:
-            # only append the words_list for words of same first letter
-            if word[0] != l:
-                continue
-            word_score = count_dict[word]
-            in_title = count_title[word] if word in count_title else 0
-
-            #if the word doesn't exist in LOCAL store (yet), make blank list
-            if word not in words_list:
-                words_list[word] = []
-
-            new_data = {
-                "title":title,
-                "file_path":haystack,
-                "score":word_score,
-                "in_title":in_title,
-                "modified":modified
-            }
-            words_list[word].append(new_data)
-
-        with open(store_file,'w') as stuff:
-             json.dump(words_list, stuff, indent=4, sort_keys=True)
+        sl.makeFletter(l)
+    for word in content:
+        fl = word[0]
+        word_score = count_dict[word]
+        in_title = count_title[word] if word in count_title else 0
+        data = (vars.current_id, word, word_score, in_title)
+        sl.addRow(fl, data)
+    sl.commit()
+    # create new list of first letters used
+    # fletter = {l[0] for l in content}
+    # for l in fletter:
+    #
+    #     for word in content:
+    #         # only append the words_list for words of same first letter
+    #         if word[0] != l:
+    #             continue
+    #         word_score = count_dict[word]
+    #         in_title = count_title[word] if word in count_title else 0
+    #
+    #
+    #         new_data = {
+    #
+    #             "score":word_score,
+    #             "in_title":in_title,
+    #             "modified":modified
+    #         }
 
         #optional logging, in case you were super interested
         # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
+
+
     vars.num_words += len(content)
     toc = time.perf_counter()
     print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
 
 
-def purge_words(removed:set, title:str) -> None:
+def purge_words(removed:set, id:int) -> None:
     """
     Deletes words sent to it from the letter_store file.
     :param removed: a set of words to remove from record
@@ -180,22 +187,9 @@ def purge_words(removed:set, title:str) -> None:
 
     for word in removed:
         #pull up the letter_store file of the word
-        first_letter = str(word[0])
-        store_file = "index/{}_store.json".format(first_letter)
-        with open(store_file) as stuff:
-            tokeep = json.load(stuff)
+        fl = str(word[0])
+        Dele = "DELETE FROM {} WHERE word={} and id={}".format(fl, word, id)
+        sl.c.execute("DELETE FROM "+fl+" WHERE word=:word and id=:id", {'word':word,'id':id})
 
-        #remove occurence of word if file title matches
-        for key, occ in enumerate(tokeep[word]):
-            # print(occ)
-            if occ['title'] == title:
-                del tokeep[word][key]
-        #if the word now has no more occurences, remove
-        del_words = []
-        if len(tokeep[word]) == 0:
-            del_words.append(word)
-        for d in del_words:
-            del tokeep[d]
-        with open(store_file,'w') as stuff:
-            json.dump(tokeep, stuff, indent=4, sort_keys=True)
+    sl.commit()
     vars.num_purge += len(removed)

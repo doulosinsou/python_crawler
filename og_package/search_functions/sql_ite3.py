@@ -6,6 +6,7 @@ class sql_ite:
     """Establishes connection and executes calls to local database"""
     def __init__(self, path):
         self.connection = sqlite3.connect(path)
+        # self.connection.row_factory = sqlite3.Row
         self.c = self.connection.cursor()
         name = "crawled"
         cols = "path text, title text, mod integer, list blob"
@@ -18,7 +19,7 @@ class sql_ite:
             print(err)
 
     def makeTable(self, name, cols):
-        createT = "CREATE TABLE {0}({1})".format(name, cols)
+        createT = "CREATE TABLE IF NOT EXISTS {0}({1})".format(name, cols)
         self.doit(createT)
 
     def addRow(self, table, content):
@@ -40,6 +41,7 @@ class sql_ite:
             return self.c.fetchall()
         else:
             return self.c.fetchone()
+
 
     def commit(self):
         self.connection.commit()
