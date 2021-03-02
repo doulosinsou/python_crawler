@@ -1,4 +1,5 @@
 import sqlite3
+import search_functions.vars as vars
 # import json
 
 class sql_ite:
@@ -33,10 +34,12 @@ class sql_ite:
         self.doit(find)
         return self.c.fetchone()
 
-    def select(self, what='', frm='', where='', equals=''):
-        find = "SELECT {} FROM {} WHERE {}=?".format(what, frm, where)
-        self.c.execute(find,(equals,))
-        return self.c.fetchall()
+    def select(self, terms, fetchall=True):
+        self.c.execute(terms)
+        if fetchall:
+            return self.c.fetchall()
+        else:
+            return self.c.fetchone()
 
     def commit(self):
         self.connection.commit()
@@ -45,8 +48,13 @@ class sql_ite:
         self.connection.close()
 
 
+
+sl = sql_ite(vars.crawled)
 #
 # slite = sql_ite('index/crawled.db')
+# find = "SELECT * FROM crawled"
+# found = slite.select(find)
+# print(found)
 #
 # fletter = "a"
 # blob = json.dumps(['this','is','a','list'])

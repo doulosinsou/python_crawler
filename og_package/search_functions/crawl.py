@@ -11,7 +11,7 @@ from search_functions.log import *
 
 import search_functions.vars as vars
 import search_functions.functions as functions
-import search_functions.sql_ite3
+from search_functions.sql_ite3 import *
 # from search_functions.vars import *
 
 def call_files(dir="./test_files") -> None:
@@ -19,7 +19,6 @@ def call_files(dir="./test_files") -> None:
     Compiles each file in directory. Sends to `crawl()` for parsing.
     :param dir: str of directory to search
     """
-
     for files in scantree(dir):
         #to ignore unnecessary repeats
         if already_crawled(files.path):
@@ -28,6 +27,7 @@ def call_files(dir="./test_files") -> None:
         vars.num_files += 1
         crawl(files.path)
         # return #end after first file crawled
+    sl.close()
 
 
 def scantree(path:str) -> dict:
@@ -60,19 +60,16 @@ def already_crawled(file:str) -> True:
     :param file: str path of file to crawl
     """
     modified = str(os.path.getmtime(file))
-    with open(vars.crawled) as cfiles:
-        flist = json.load(cfiles)
-    for f in flist:
-        fsplit = f.split('_MOD_')
-        path = fsplit[0]
-        mod = fsplit[1]
-        # if the filename matches and the modified date is unchanged
-        if (path == file) and (mod == modified):
-            return True
+    # print("SELECT * FROM crawled WHERE path="+file+" AND mod="+modified)
+    exists= sl.select("SELECT * FROM crawled WHERE path='"+file+"' AND mod="+modified,
+    fetchall=False)
+    # if the filename matches and the modified date is unchanged
+    if exists:
+        return True
     # if new file or if file has been since modified, create record
-    flist.append(file+"_MOD_"+modified)
-    with open(vars.crawled, 'w') as cfiles:
-        json.dump(flist, cfiles, indent=4, sort_keys=True)
+    newcrawled = (file, "None", modified, "None")
+    sl.addRow('crawled', newcrawled)
+    sl.commit()
     return False
 
 
