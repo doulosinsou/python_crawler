@@ -16,7 +16,7 @@ include_all = getconf('include', 'non-text',line=True)+include_text
 
 exclude_words = open(pathit('exclude_words.txt')).read().splitlines()
 
-crawled = pathit('index/crawled.json', ROOT=True)
+crawled = pathit('index/crawled.db', ROOT=True)
 
 num_files = 0
 num_dir = 0

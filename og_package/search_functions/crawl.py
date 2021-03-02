@@ -8,8 +8,10 @@ from bs4 import BeautifulSoup
 from search_functions.colors import *
 from search_functions.log import *
 
+
 import search_functions.vars as vars
 import search_functions.functions as functions
+import search_functions.sql_ite3
 # from search_functions.vars import *
 
 def call_files(dir="./test_files") -> None:
