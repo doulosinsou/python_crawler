@@ -1,10 +1,10 @@
 import sqlite3
-import json
+# import json
 
 class sql_ite:
     """Establishes connection and executes calls to local database"""
-    def __init__(self):
-        self.connection = sqlite3.connect('index/crawled.db')
+    def __init__(self, path):
+        self.connection = sqlite3.connect(path)
         self.c = self.connection.cursor()
         name = "crawled"
         cols = "path text, title text, mod integer, list blob"
@@ -33,6 +33,11 @@ class sql_ite:
         self.doit(find)
         return self.c.fetchone()
 
+    def select(self, what='', frm='', where='', equals=''):
+        find = "SELECT {} FROM {} WHERE {}=?".format(what, frm, where)
+        self.c.execute(find,(equals,))
+        return self.c.fetchall()
+
     def commit(self):
         self.connection.commit()
 
@@ -40,25 +45,28 @@ class sql_ite:
         self.connection.close()
 
 
+#
+# slite = sql_ite('index/crawled.db')
+#
+# fletter = "a"
+# blob = json.dumps(['this','is','a','list'])
+# newcrawled = ('path/goes/here','my path',20210301,blob)
+#
+# slite.makeFletter(fletter)
+# slite.addRow('crawled', newcrawled)
+#
+# id = slite.id()[0]
+# newRowData = (id, 'aakbar', 5, 0)
+# slite.addRow(fletter, newRowData)
 
-slite = sql_ite()
-
-fletter = "a"
-blob = json.dumps(['this','is','a','list'])
-newcrawled = ('path/goes/here','my path',20210301,blob)
-
-slite.makeFletter(fletter)
-slite.addRow('crawled', newcrawled)
-
-id = slite.id()[0]
-newRowData = (id, 'aakbar', 5, 0)
-slite.addRow(fletter, newRowData)
-
-slite.commit()
-slite.c.execute("SELECT * FROM a WHERE word=?",('aakbar',))
-stuff = slite.c.fetchall()
-for s in stuff:
-    print(s)
-
-
-slite.close()
+# slite.commit()
+# slite.c.execute("SELECT * FROM a WHERE word=?",('aakbar',))
+# stuff = slite.c.fetchall()
+#
+# stuff = slite.select(what="*", frm="a", where="word", equals="aakbar")
+# # print(stuff)
+# for s in stuff:
+#     print(s)
+#
+#
+# slite.close()
