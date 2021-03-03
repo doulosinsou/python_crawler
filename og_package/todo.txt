@@ -1,2 +1,2 @@
-1- handle deleted files
-2- handle numbers with words 
+**1- handle deleted files
+**2- handle numbers with words 

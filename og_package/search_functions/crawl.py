@@ -12,13 +12,14 @@ from search_functions.log import *
 import search_functions.vars as vars
 import search_functions.functions as functions
 from search_functions.sql_ite3 import *
-# from search_functions.vars import *
+
 
 def call_files(dir="./test_files") -> None:
     """
     Compiles each file in directory. Sends to `crawl()` for parsing.
     :param dir: str of directory to search
     """
+    #already loaded var sl from sql_ite3.py with sql_ite class initiated
     #start by resetting the active status of pre-crawled pages.
     clear_active()
     for files in scantree(dir):
@@ -30,6 +31,7 @@ def call_files(dir="./test_files") -> None:
         crawl(files.path)
     #remove words from paths that have been deleted
     del_inactive()
+    #closes class sql_ite from sql_ite3.py
     sl.close()
 
 
@@ -116,25 +118,36 @@ def crawl(haystack:str) -> None:
     else: # If file is not intended to be read, treat the title as extent of search
         content = title = os.path.splitext(os.path.basename(haystack))[0].lower()
 
-    content = re.sub(r'[^a-zA-Z\s]+','',content).split() # creates list of words, stripped of nonletters
-    s_title = re.sub(r'[^a-zA-Z\s]+','',title).split() # for searching title
-    count_dict = {n:content.count(n) for n in set(content)} #creates a dict of words with their wordcount
-    count_title = {n:s_title.count(n) for n in set(s_title)} # for hits in title
+    # creates list of words, stripped of nonletters
+    content = re.sub(r'[^a-zA-Z\s]+','',content).split()
+    # for searching title
+    s_title = re.sub(r'[^a-zA-Z\s]+','',title).split()
 
-    content = list(set(content) - set(vars.exclude_words)) #creates list of valid words
+    #creates a dict of words with their wordcount
+    count_dict = {n:content.count(n) for n in set(content)}
+    # for hits in title
+    count_title = {n:s_title.count(n) for n in set(s_title)}
+    #creates list of valid words
+    content = list(set(content) - set(vars.exclude_words))
 
     #list of valid words to catalogue generated the last time the file was crawled
     sel = "SELECT list FROM crawled WHERE rowid="+str(vars.current_id)
     old_data = sl.select(sel, fetchall=False)
-    # print(old_data)
 
-    if old_data[0] != "None":
+    if old_data['list'] != "None":
         old_words = json.loads(old_data[0])
-        removed_words = set(old_words)-set(content) #compares old words to incoming words
-        purge_words(removed_words, vars.current_id) #delete occurences/words which are no longer in use
-        new_words = list(content) #make copy of new words to catalogue for next comparison
-        content = list(set(content)-set(old_words)) #minimize the number of words to catalogue: only new words
-    else: # for first time through. the file_store.json doesn't exist yet
+        #compares old words to incoming words
+        removed_words = set(old_words)-set(content)
+
+        #delete occurences/words which are no longer in use
+        purge_words(removed_words, vars.current_id)
+
+        #make copy of new words to catalogue for next comparison
+        new_words = list(content)
+
+        #minimize the number of words to catalogue: only new words
+        content = list(set(content)-set(old_words))
+    else:
         new_words = content
 
     blob = json.dumps(new_words)
@@ -152,28 +165,6 @@ def crawl(haystack:str) -> None:
         data = (vars.current_id, word, word_score, in_title)
         sl.addRow(fl, data)
     sl.commit()
-    # create new list of first letters used
-    # fletter = {l[0] for l in content}
-    # for l in fletter:
-    #
-    #     for word in content:
-    #         # only append the words_list for words of same first letter
-    #         if word[0] != l:
-    #             continue
-    #         word_score = count_dict[word]
-    #         in_title = count_title[word] if word in count_title else 0
-    #
-    #
-    #         new_data = {
-    #
-    #             "score":word_score,
-    #             "in_title":in_title,
-    #             "modified":modified
-    #         }
-
-        #optional logging, in case you were super interested
-        # print("successfully scraped "+Color.B_White+Color.F_Black+word+Color.F_Default+Color.B_Default)
-
 
     vars.num_words += len(content)
     toc = time.perf_counter()
@@ -184,7 +175,7 @@ def purge_words(removed:set, id:int) -> None:
     """
     Deletes words sent to it from the letter_store file.
     :param removed: a set of words to remove from record
-    :param title: the title of the page to remove record from
+    :param id: the crawled table rowid of the path to remove record from
     """
 
     #ignore empty requests
@@ -192,11 +183,8 @@ def purge_words(removed:set, id:int) -> None:
         return
 
     for word in removed:
-        #pull up the letter_store file of the word
-
         fl = str(word[0])
         Dele = "DELETE FROM {} WHERE word={} and id={}".format(fl, word, id)
-        # print(Dele)
         sl.c.execute("DELETE FROM "+fl+" WHERE word=:word and id=:id", {'word':word,'id':id})
 
     sl.commit()
@@ -204,18 +192,21 @@ def purge_words(removed:set, id:int) -> None:
 
 
 def clear_active()->None:
+    """Resets active status of crawled files to default 0"""
     update = "UPDATE crawled SET active=0"
     sl.c.execute(update)
     sl.commit()
 
 
 def set_active(id:int)->None:
+    """Manually sets active status to 1."""
     update = "UPDATE crawled SET active=1 WHERE rowid={}".format(id)
     sl.c.execute(update)
     sl.commit()
 
 
 def del_inactive() -> None:
+    """Finds files that have not be set to active (files that have been deleted from search directory). Purges their words, deletes from crawled.db"""
     deleted = sl.select("SELECT rowid, list FROM crawled WHERE active=0")
     for d in deleted:
         decoded = json.loads(d['list'])

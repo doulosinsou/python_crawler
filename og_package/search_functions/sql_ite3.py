@@ -52,31 +52,3 @@ class sql_ite:
 
 
 sl = sql_ite(vars.crawled)
-#
-# slite = sql_ite('index/crawled.db')
-# find = "SELECT * FROM crawled"
-# found = slite.select(find)
-# print(found)
-#
-# fletter = "a"
-# blob = json.dumps(['this','is','a','list'])
-# newcrawled = ('path/goes/here','my path',20210301,blob)
-#
-# slite.makeFletter(fletter)
-# slite.addRow('crawled', newcrawled)
-#
-# id = slite.id()[0]
-# newRowData = (id, 'aakbar', 5, 0)
-# slite.addRow(fletter, newRowData)
-
-# slite.commit()
-# slite.c.execute("SELECT * FROM a WHERE word=?",('aakbar',))
-# stuff = slite.c.fetchall()
-#
-# stuff = slite.select(what="*", frm="a", where="word", equals="aakbar")
-# # print(stuff)
-# for s in stuff:
-#     print(s)
-#
-#
-# slite.close()
