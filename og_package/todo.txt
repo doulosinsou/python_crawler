@@ -1,15 +1,2 @@
-1- make init script to create `index.db`
-
-2- add tables:
-  `crawled`: cols (id, path, title, mod) list of words)
-  `path_store`: cols (id, content)
-
-3- change `already_crawled` to update `crawled.db`
-
-4- change file_store from crawl() to access and update `path_store.db`
-
-5- change fletter in crawl() to send data to global l_store dict var with 'addwords' and 'delwords'
-
-6- change purge_words() to update l_store[delwords]
-
-6- enact sqlite storage by creating fletter table with (word, path_id, score, in_title) followed by adding rows per l_store[addwords] followed by deleting rows per l_store[delwords] 
+1- handle deleted files
+2- handle numbers with words 

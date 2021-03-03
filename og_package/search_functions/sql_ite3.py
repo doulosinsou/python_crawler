@@ -6,10 +6,10 @@ class sql_ite:
     """Establishes connection and executes calls to local database"""
     def __init__(self, path):
         self.connection = sqlite3.connect(path)
-        # self.connection.row_factory = sqlite3.Row
+        self.connection.row_factory = sqlite3.Row
         self.c = self.connection.cursor()
         name = "crawled"
-        cols = "path text, title text, mod integer, list blob"
+        cols = "id INTEGER PRIMARY KEY, path TEXT, title TEXT, mod INTEGER, list BLOB, active INTEGER DEFAULT 1"
         self.makeTable(name, cols)
 
     def doit(self, thing):

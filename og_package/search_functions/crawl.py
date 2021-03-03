@@ -19,6 +19,8 @@ def call_files(dir="./test_files") -> None:
     Compiles each file in directory. Sends to `crawl()` for parsing.
     :param dir: str of directory to search
     """
+    #start by resetting the active status of pre-crawled pages.
+    clear_active()
     for files in scantree(dir):
         #to ignore unnecessary repeats
         if already_crawled(files.path):
@@ -26,7 +28,8 @@ def call_files(dir="./test_files") -> None:
             continue
         vars.num_files += 1
         crawl(files.path)
-        # return #end after first file crawled
+    #remove words from paths that have been deleted
+    del_inactive()
     sl.close()
 
 
@@ -51,6 +54,7 @@ def scantree(path:str) -> dict:
             #ignore file types not on include list
             if not any(entry.path.lower().endswith("."+inc.split('.')[-1]) for inc in vars.include_all):
                 continue
+
             yield entry
 
 
@@ -66,18 +70,20 @@ def already_crawled(file:str) -> True:
     # if the filename matches and the modified date is unchanged
 
     if exists:
-        if exists[1] == modified:
+        if exists['mod'] == modified:
+            set_active(exists['id'])
             return True
     #if file matches but has been since modified
         else:
-            update = "UPDATE crawled SET mod = {} WHERE rowid={}".format(modified, exists[0])
+            update = "UPDATE crawled SET mod = {} WHERE rowid={}".format(modified, exists['id'])
             sl.c.execute(update)
-            vars.current_id = exists[0]
+            vars.current_id = exists['id']
             sl.commit()
+            set_active(exists['id'])
             return False
     # if new file create record
     newcrawled = (file, "None", modified, "None")
-    sl.addRow('crawled', newcrawled)
+    sl.addRow('crawled (path, title, mod, list)', newcrawled)
     vars.current_id = sl.id()[0]
     sl.commit()
     return False
@@ -187,9 +193,34 @@ def purge_words(removed:set, id:int) -> None:
 
     for word in removed:
         #pull up the letter_store file of the word
+
         fl = str(word[0])
         Dele = "DELETE FROM {} WHERE word={} and id={}".format(fl, word, id)
+        # print(Dele)
         sl.c.execute("DELETE FROM "+fl+" WHERE word=:word and id=:id", {'word':word,'id':id})
 
     sl.commit()
     vars.num_purge += len(removed)
+
+
+def clear_active()->None:
+    update = "UPDATE crawled SET active=0"
+    sl.c.execute(update)
+    sl.commit()
+
+
+def set_active(id:int)->None:
+    update = "UPDATE crawled SET active=1 WHERE rowid={}".format(id)
+    sl.c.execute(update)
+    sl.commit()
+
+
+def del_inactive() -> None:
+    deleted = sl.select("SELECT rowid, list FROM crawled WHERE active=0")
+    for d in deleted:
+        decoded = json.loads(d['list'])
+        purge_words(decoded, d['id'])
+
+    wipe = "DELETE FROM crawled WHERE active=0"
+    sl.c.execute(wipe)
+    sl.commit()
