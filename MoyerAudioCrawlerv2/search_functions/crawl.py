@@ -24,10 +24,8 @@ def call_files(dir="./test_files") -> None:
     clear_active()
     for files in scantree(dir):
         #to ignore unnecessary repeats
-        ac = already_crawled(files.path)
-        if ac:
-            print(ac+" already crawled")
-            # print(files.path+" already crawled")
+        if already_crawled(files.path):
+            print(files.path+" already crawled")
             continue
         vars.num_files += 1
         crawl(files.path)
@@ -68,18 +66,15 @@ def already_crawled(file:str) -> True:
     :param file: str path of file to crawl
     """
     modified = os.path.getmtime(file)
-    rel = file.split(vars.rel_path)[-1]
-
-    # exists= sl.select("SELECT rowid, mod, path FROM crawled WHERE path='"+rel+"' LIMIT 1",
-    # fetchall=False)
-    exists= sl.select("SELECT rowid, mod, path FROM crawled WHERE path=''"+rel+"'' LIMIT 1",
+    # print("SELECT * FROM crawled WHERE path="+file+" AND mod="+modified)
+    exists= sl.select("SELECT rowid, mod FROM crawled WHERE path='"+file+"' LIMIT 1",
     fetchall=False)
     # if the filename matches and the modified date is unchanged
 
     if exists:
         if exists['mod'] == modified:
             set_active(exists['id'])
-            return exists['path']
+            return True
     #if file matches but has been since modified
         else:
             update = "UPDATE crawled SET mod = {} WHERE rowid={}".format(modified, exists['id'])
@@ -89,7 +84,7 @@ def already_crawled(file:str) -> True:
             set_active(exists['id'])
             return False
     # if new file create record
-    newcrawled = (rel, "None", modified, "None")
+    newcrawled = (file, "None", modified, "None")
     sl.addRow('crawled (path, title, mod, list)', newcrawled)
     vars.current_id = sl.id()[0]
     sl.commit()
@@ -173,8 +168,7 @@ def crawl(haystack:str) -> None:
 
     vars.num_words += len(content)
     toc = time.perf_counter()
-    rel = haystack.split(vars.rel_path)[-1]
-    print_green("Crawled {} in {:0.4f} seconds".format(rel, toc-tic) )
+    print_green("Crawled {} in {:0.4f} seconds".format(haystack, toc-tic) )
 
 
 def purge_words(removed:set, id:int) -> None:
