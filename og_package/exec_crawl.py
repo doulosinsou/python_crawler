@@ -13,7 +13,14 @@ call_files(search_dir) #this starts it all
 end_timer = time.perf_counter()
 total_time = end_timer-start_timer
 
-print_yellow("Crawled {} files from {} directories.\nIndexed {} words.\nPurged {} words".format(vars.num_files, vars.num_dir, vars.num_words, vars.num_purge))
+print()
+print("Report: ")
+print_green("Indexed {} words".format(vars.num_words))
+for type in vars.num_type:
+    print_yellow("\t{}: {}".format(type, vars.num_type[type]))
+print()
+print_yellow("Purged {} files".format(vars.num_purge))
+# print_yellow("Report: {} files from {} directories.\nIndexed {} words.\nPurged {} words".format(vars.num_files, vars.num_dir, vars.num_words, vars.num_purge))
 print_green("Total time: {:0.4}s".format(total_time))
 
 endfile = " end file ".center(80, "*")

@@ -31,6 +31,12 @@ def call_files(dir="./test_files") -> None:
             continue
         vars.num_files += 1
         print(vars.num_files, end=" : ")
+        type = files.path.lower().split(".")[-1]
+        if type not in vars.num_type:
+            vars.num_type[type] = 1
+        else:
+            vars.num_type[type] += 1
+
         crawl(files.path)
     #remove words from paths that have been deleted
     del_inactive()
@@ -53,10 +59,10 @@ def scantree(path:str) -> dict:
             continue
         #recurse through directories
         if entry.is_dir(follow_symlinks=False):
-            vars.num_dir += 1
             yield from scantree(entry.path)
         else:
             #ignore file types not on include list
+
             if not any(entry.path.lower().endswith("."+inc.split('.')[-1]) for inc in vars.include_all):
                 continue
 

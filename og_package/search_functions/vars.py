@@ -20,6 +20,6 @@ crawled = pathit('index/crawled.db', ROOT=True)
 current_id = 0
 
 num_files = 0
-num_dir = 0
+num_type = {}
 num_words = 0
 num_purge = 0
