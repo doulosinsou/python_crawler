@@ -19,7 +19,8 @@ while True:
     a = sl.select(join, (inp,))
 
     for w in a:
-        print(w['word'], w['title'])
+        print("{:<12} {:<30} count: {:>4}".format(w['word'], w['title'], w['count']))
+        # print()
         # newset = {w['id'] for w in a}
         # for ids in newset:
         #
