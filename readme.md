@@ -1,7 +1,7 @@
-#Python Crawler by Moyer Audio
+# Python Crawler by Moyer Audio
 Search and catalogue words from files in directories
 
-##Install
+## Install
 Unpack zip onto Python 3 enabled directory
 
 Install BeautifulSoup4 (tested with version 4.9.3)
@@ -19,10 +19,10 @@ ConfigParser
 
 ```
 
-###Update directory to search
+### Update directory to search
 Open `.config`. Use `[location]`. Enter absolute path of directory to search in `search_abs` or relative path in `search_rel`. (Do not prepend `/` on relative path.)
 
-###Exclude certain files/folders
+### Exclude certain files/folders
 Open `.config` . Use `[exclude]`. In `paths=` Write folders or openings of folder names you wish to exclude from the crawl. In `files=` write the files or openings of file names you wish to exclude.
 
 Example: The following does not crawl these files:
@@ -39,7 +39,7 @@ file=
   skip_me.htm
 ```
 
-###Include file types you want to crawl
+### Include file types you want to crawl
 Open `.config`. Use `[include]`. Two sections in the files are: 'Text:' and 'Non-text:'. Write dot + extension of files you want to crawl on new line in 'Text' section. All other file types you add to 'non-text' will use only the title of the file as it's search.
 
 Example:
@@ -55,16 +55,16 @@ Non-text:
 __note: Non-text files only catalogue its own title__
 The file `listen_to_jazz.mp3` will scrape the words 'listen', 'to', 'jazz'.
 
-###Exclude common words
+### Exclude common words
 Update `/search_functions/exclude_words.txt` for specific words you want to not scrape. If you want to resort the list or purge duplicates, run `sort_ex_words.py`.
 
-##Run
+## Run
 Run `exec_crawl.py` to scrape words from directory and build store files.
 
-##Wipe
+## Wipe
 Re-running `exec_crawl.py` checks the modified date of each file. Run `wipe.py` to clear store files AND log file.
 
-##Use
+## Use
 The store files are sqlite `crawled.db`. There are two table structures represented below:
 
 ```
