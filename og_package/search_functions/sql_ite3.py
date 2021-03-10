@@ -35,8 +35,8 @@ class sql_ite:
         self.doit(find)
         return self.c.fetchone()
 
-    def select(self, terms, fetchall=True):
-        self.c.execute(terms)
+    def select(self, terms, cond, fetchall=True):
+        self.c.execute(terms, cond)
         if fetchall:
             return self.c.fetchall()
         else:

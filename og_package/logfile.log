@@ -1,29 +1,16 @@
-2021-03-09 21:43:21
+2021-03-10 14:52:24
 [97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/og_package/test_files[49m[39m
-[32mCrawled /avoiding_compromise.html in 0.0763 seconds[39m
-[32mCrawled /subdir02/avoiding_compromise03.htm in 0.0523 seconds[39m
-[32mCrawled /subdir02/bodily_exercise03.htm in 0.0216 seconds[39m
-[32mCrawled /faithfulness.htm in 0.1098 seconds[39m
-[32mCrawled /bodily_exercise.htm in 0.0201 seconds[39m
-[32mCrawled /commitment.htm in 0.0514 seconds[39m
-[32mCrawled /Christ the Very Form of God.mp3 in 0.0023 seconds[39m
-[33mCrawled 7 files from 1 directories.
-Indexed 2515 words.
+1 : [32mAbout to crawl /avoiding_compromise.html[39m [33mcompleted in 0.0910 seconds[39m
+2 : [32mAbout to crawl /subdir02/avoiding_compromise03.htm[39m [33mcompleted in 0.0535 seconds[39m
+3 : [32mAbout to crawl /subdir02/bodily_exercise03.htm[39m [33mcompleted in 0.0250 seconds[39m
+4 : [32mAbout to crawl /faithfulness.htm[39m [33mcompleted in 0.1228 seconds[39m
+5 : [32mAbout to crawl /bodily_exercise.htm[39m [33mcompleted in 0.0249 seconds[39m
+6 : [32mAbout to crawl /problem i'm having.html[39m [33mcompleted in 0.0028 seconds[39m
+7 : [32mAbout to crawl /commitment.htm[39m [33mcompleted in 0.0697 seconds[39m
+8 : [32mAbout to crawl /Christ the Very Form of God.mp3[39m [33mcompleted in 0.0041 seconds[39m
+[33mCrawled 8 files from 1 directories.
+Indexed 2518 words.
 Purged 0 words[39m
-[32mTotal time: 0.343s[39m
+[32mTotal time: 0.4039s[39m
 *********************************** end file *********************************** 
 
-2021-03-09 21:44:57
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/og_package/test_files[49m[39m
-/avoiding_compromise.html already crawled
-/subdir02/avoiding_compromise03.htm already crawled
-/subdir02/bodily_exercise03.htm already crawled
-/faithfulness.htm already crawled
-/bodily_exercise.htm already crawled
-2021-03-09 21:45:23
-[97m[41m/Users/admin/Desktop/Web-Developement/MOYER AUDIO/2020 Clients/Rose Avenue/_search_engine/python_crawler/og_package/test_files[49m[39m
-/avoiding_compromise.html already crawled
-/subdir02/avoiding_compromise03.htm already crawled
-/subdir02/bodily_exercise03.htm already crawled
-/faithfulness.htm already crawled
-/bodily_exercise.htm already crawled

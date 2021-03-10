@@ -2,8 +2,11 @@ def print_yellow(txt:str) -> None:
     print(Color.F_Yellow+txt+Color.F_Default)
 
 
-def print_green(txt:str) -> None:
-    print(Color.F_Green+txt+Color.F_Default)
+def print_green(txt:str, sameline='') -> None:
+    if sameline:
+        print(Color.F_Green+txt+Color.F_Default, end=sameline)
+    else:
+        print(Color.F_Green+txt+Color.F_Default)
 
 
 def print_red(txt:str) -> None:

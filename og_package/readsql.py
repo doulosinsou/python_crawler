@@ -13,10 +13,10 @@ while True:
     SELECT word, title, count, in_title
     FROM {0}
     INNER JOIN crawled on crawled.rowid = {0}.id
-    WHERE word='{1}'
-    """.format(fl,inp)
-    sel = "SELECT * FROM {} WHERE word='{}'".format(fl, inp)
-    a = sl.select(join)
+    WHERE word=?
+    """.format(fl)
+
+    a = sl.select(join, (inp,))
 
     for w in a:
         print(w['word'], w['title'])

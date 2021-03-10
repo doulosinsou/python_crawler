@@ -30,6 +30,7 @@ def call_files(dir="./test_files") -> None:
             # print(files.path+" already crawled")
             continue
         vars.num_files += 1
+        print(vars.num_files, end=" : ")
         crawl(files.path)
     #remove words from paths that have been deleted
     del_inactive()
@@ -72,7 +73,7 @@ def already_crawled(file:str) -> True:
 
     # exists= sl.select("SELECT rowid, mod, path FROM crawled WHERE path='"+rel+"' LIMIT 1",
     # fetchall=False)
-    exists= sl.select("SELECT rowid, mod, path FROM crawled WHERE path=''"+rel+"'' LIMIT 1",
+    exists= sl.select("SELECT rowid, mod, path FROM crawled WHERE path=? LIMIT 1", (rel,),
     fetchall=False)
     # if the filename matches and the modified date is unchanged
 
@@ -100,7 +101,8 @@ def crawl(haystack:str) -> None:
     """Creates an index for every significant word used in supplied file. Scores the word by how many times it is used. Tracks title score and modification date of file.
     :param haystack: str path to file
     """
-
+    rel = haystack.split(vars.rel_path)[-1]
+    print_green("About to crawl {}".format(rel), sameline=" ")
     tic = time.perf_counter()
     modified = time.ctime(os.path.getmtime(haystack)) # when was the file last changed
 
@@ -108,7 +110,8 @@ def crawl(haystack:str) -> None:
     inc_list = vars.include_text
 
     # Is the file intended for text searching? Use html parser.
-    if any(x in haystack for x in inc_list):
+    # if any(x in haystack for x in inc_list):
+    if any(haystack.lower().endswith("."+inc.split('.')[-1]) for inc in vars.include_text):
         try: #Just in case the file has data that can't be read
             with open(haystack, 'rb') as file:
                 soup = BeautifulSoup(file, 'html.parser')
@@ -136,8 +139,8 @@ def crawl(haystack:str) -> None:
     content = list(set(content) - set(vars.exclude_words))
 
     #list of valid words to catalogue generated the last time the file was crawled
-    sel = "SELECT list FROM crawled WHERE rowid="+str(vars.current_id)
-    old_data = sl.select(sel, fetchall=False)
+    sel = "SELECT list FROM crawled WHERE rowid=?"
+    old_data = sl.select(sel, (str(vars.current_id),), fetchall=False)
 
     if old_data['list'] != "None":
         old_words = json.loads(old_data[0])
@@ -156,8 +159,8 @@ def crawl(haystack:str) -> None:
         new_words = content
 
     blob = json.dumps(new_words)
-    update = "UPDATE crawled SET list=?, title='{}' WHERE rowid={}".format(title, vars.current_id)
-    sl.c.execute(update, (blob,))
+    update = "UPDATE crawled SET list=?, title=? WHERE rowid=?"
+    sl.c.execute(update, (blob, title, vars.current_id))
     sl.commit()
 
     fletter = {l[0] for l in content}
@@ -173,8 +176,7 @@ def crawl(haystack:str) -> None:
 
     vars.num_words += len(content)
     toc = time.perf_counter()
-    rel = haystack.split(vars.rel_path)[-1]
-    print_green("Crawled {} in {:0.4f} seconds".format(rel, toc-tic) )
+    print_yellow("completed in {:0.4f} seconds".format(toc-tic))
 
 
 def purge_words(removed:set, id:int) -> None:
@@ -213,7 +215,7 @@ def set_active(id:int)->None:
 
 def del_inactive() -> None:
     """Finds files that have not be set to active (files that have been deleted from search directory). Purges their words, deletes from crawled.db"""
-    deleted = sl.select("SELECT rowid, list FROM crawled WHERE active=0")
+    deleted = sl.select("SELECT rowid, list FROM crawled WHERE active=0", ())
     for d in deleted:
         decoded = json.loads(d['list'])
         purge_words(decoded, d['id'])
