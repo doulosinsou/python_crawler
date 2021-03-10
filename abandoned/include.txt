@@ -1,8 +1,0 @@
-Text:
-.htm
-.html
-.php
-.txt
-
-Non-Text:
-.mp3

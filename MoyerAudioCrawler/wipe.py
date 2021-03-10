@@ -19,11 +19,6 @@ def scantree(path:str) -> dict:
 # dir = os.getcwd()+"/index"
 dir = vars.index_path
 for f in scantree(dir):
-    if 'crawled.json' in f.path:
-        with open(f.path,'w') as crawled:
-            blank = []
-            json.dump(blank, crawled)
-        continue
     print("Removing {}".format(f))
     os.remove(os.path.join(dir, f))
     if not os.path.isfile(os.path.join(dir, f)):

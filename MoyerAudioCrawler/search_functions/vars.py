@@ -16,7 +16,7 @@ include_all = getconf('include', 'non-text',line=True)+include_text
 
 exclude_words = open(pathit('exclude_words.txt')).read().splitlines()
 
-crawled = pathit('index/crawled.db', ROOT=True)
+crawled = pathit(index_path+'/crawled.db', ROOT=True)
 current_id = 0
 
 num_files = 0

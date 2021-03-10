@@ -1,4 +1,0 @@
-/subdir/
-skip_me.htm
-/_
-/demo/
