@@ -56,7 +56,7 @@ __note: Non-text files only catalogue its own title__
 The file `listen_to_jazz.mp3` will scrape the words 'listen', 'to', 'jazz'.
 
 ### Exclude common words
-Update `/search_functions/exclude_words.txt` for specific words you want to not scrape. If you want to resort the list or purge duplicates, run `sort_ex_words.py`.
+Update `/search_functions/exclude_words.txt` for specific words you want to not scrape. 
 
 ## Run
 Run `exec_crawl.py` to scrape words from directory and build store files.
